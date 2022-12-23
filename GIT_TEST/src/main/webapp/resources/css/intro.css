@@ -1,0 +1,75 @@
+.intro{
+    margin-top: 7%;
+}
+.intro-tit{
+    display: flex;
+    justify-content: center;
+}
+.title-intro {
+    text-align: "center";
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+.title-intro > h3{
+    padding-top: 10px;
+}
+.title-subtitle{
+    text-align: center;
+
+}
+.title-subtitle > h5{
+    border-bottom: 1px solid black;
+}
+.subtitle1{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.subtitle1-1{
+    display: inline-block;
+    width:400px;
+    margin-right: 5%;
+}
+.subtitle-text > .small{
+    line-height: 25.5px;
+}
+.subtitle1-2{
+    display: inline-block;
+    width:400px;
+    margin-left: 5%;
+}
+
+.subtitle2{
+  
+    background-color: white;
+    width: 900px;
+    height: 150px;
+    margin-left: 25%;
+    margin-top: 50px;
+    line-height: 40px;
+} 
+.subtitle2 > p{
+
+   text-align: center;
+   padding-top: 30px;
+}
+.card{
+    margin-top: 30px;
+}
+.card-title{
+    text-align: center;
+}
+.card-body1{
+    display: inline-block;
+    width: 600px;
+    height: 400px;
+    margin-left: 70px;
+    margin-bottom: 100px;
+}
+.card-body2{
+    display: inline-block;
+    width: 600px;
+    height: 400px;
+}
+/* col-sm-4 col-lg-4 mb-5  */
