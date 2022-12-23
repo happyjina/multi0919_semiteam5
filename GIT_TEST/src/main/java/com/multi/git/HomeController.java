@@ -33,7 +33,7 @@ public class HomeController {
 			System.out.println("1.2버전이 아닙니다.");
 		}
 
-		
+		System.out.println("1.3버전입니다.");
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
