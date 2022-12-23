@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>사부작 </title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Around - Multipurpose Bootstrap HTML Template">
+    <meta name="keywords" content="bootstrap, business, corporate, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, saas, multipurpose, product landing, shop, software, ui kit, web studio, landing, dark mode, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/logo_black.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/logo_black.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/logo_black.png">
+    <link rel="manifest" href="../img/logo_black.png">
+    <link rel="mask-icon" color="#6366f1" href="../img/logo_black.png">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" href="../img/logo_black.png">
+    <meta name="theme-color" content="white">
+    <!-- Theme mode-->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== undefined && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+      
+      
+    </script>
+    
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1500);
+        };
+      })();
+      
+    </script>
+    <!-- Import Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" id="google-font">
+    <!-- Vendor styles-->
+    <link rel="stylesheet" media="screen" href="../css/swiper-bundle.min.css"/>
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../css/theme.min.css">
+    <!--Header stylesheet-->
+    <link rel="stylesheet" href="../css/header.css">
+  </head>
+  <!-- Body-->
+  <body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+    <!-- Page wrapper-->
+    
+    <main class="page-wrapper">
+
+      <!--헤더부분~~~~-->
+      
+      <header class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container"><a class="navbar-brand pe-sm-3" href="index.html">
+          <img src="../img/logo_small1.png">
+          <span class="d-none d-sm-inline">사부작</span></a>
+          <div class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto" data-bs-toggle="mode">
+            <a class="btn btn-primary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex" href="https://themes.getbootstrap.com/product/around-multipurpose-template-ui-kit/" target="_blank" rel="noopener">로그인 </a>
+        </div>
+        <a class="btn btn-primary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex" href="https://themes.getbootstrap.com/product/around-multipurpose-template-ui-kit/" target="_blank" rel="noopener">회원가입</a>
+          
+          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+          <nav class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
+              
+              <li class="nav-item dropdown"><a class="nav-link" href="#" >사부작소개</a>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link" href="#">박물관</a>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link" href="#" >유물</a>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link" href="#" >특별전시</a>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link" href="#" >게시판</a>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link" href="#" >공지사항</a>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link" href="#" >마이페이지</a>
+              </li>
+              </ul>
+          </nav>
+        </div>
+      </header>
+      
+        <!-- 헤더 네비 아래 가운데 큰 배경들-->
+        <section>
+            <div class="jarallax bg-dark min-vh-40 py-4" data-jarallax data-type="scroll-opacity" data-speed="0.7">
+              <div class="jarallax-img"><img src="../img/header_mid.png" style="height: 100%;"></div>
+              <div class="container position-relative zindex-5 py-sm-4 py-lg-5 mt-4">
+
+                    <h1 class="display-4 text-light text-lowercase pb-sm-2 pb-md-3" style="margin-top: 30%;">사부작에 오신걸 환영합니다</h1>
+                    <h3 class="text-light opacity-70 pb-3 pb-md-4 mb-3" style="max-width: 520px;">온라인으로 다양한 유물을 보세요</h3>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+         
+                  
+                </div>
+  </main>
+  </body>
+</html>
