@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>사부작 | 박물관 검색</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Around - Multipurpose Bootstrap HTML Template">
+    <meta name="keywords" content="bootstrap, business, corporate, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, saas, multipurpose, product landing, shop, software, ui kit, web studio, landing, dark mode, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/sabuzak_logo_black.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/sabuzak_logo_black.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/sabuzak_logo_black.png">
+    <link rel="manifest" href="../img/sabuzak_logo_black.png">
+    <link rel="mask-icon" color="#6366f1" href="../img/sabuzak_logo_black.png">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" href="../img/sabuzak_logo_black.png">
+    <meta name="theme-color" content="white">
+    <!-- Fancybox -->
+<link rel="stylesheet" href="../vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+
+<!-- Import Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" id="google-font">
+    <!-- Vendor styles-->
+    <link rel="stylesheet" media="screen" href="../css/swiper-bundle.min.css"/>
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../css/theme.min.css">
+    <!--Header stylesheet-->
+    <link rel="stylesheet" href="../css/header_1.css">
+    <!--body stylesheet-->
+    <link rel="stylesheet" href="../css/museumSearch.css">
+    <!--Footer stylesheet-->
+    <link rel="stylesheet" href="../css/footer_1.css">
+
+    <!--부트스트랩 아이콘-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <!-- Fontawesome -->
+    <link type="text/css" href="../fontawesome-free/css/all.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== undefined && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+      
+      
+    </script>
+    
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1500);
+        };
+      })();
+
+      </script>
+
+
+
+  </head>
+  <!-- Body-->
+  <body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+    <!-- Page wrapper-->
+    
+    <main class="page-wrapper">
+
+      <!--헤더부분~~~~-->
+      <header class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container"><a class="navbar-brand pe-sm-3" href="index.html">
+          <img src="../img/logo_small1.png">
+          <span class="d-none d-sm-inline">사부작</span></a>
+          <div class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto" data-bs-toggle="mode">
+            <a class="btn btn-primary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex" href="login.html" target="_blank" rel="noopener">&nbsp;로그인&nbsp; </a>      
+            <a class="btn btn-primary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex" href="enroll.html" target="_blank" rel="noopener">&nbsp;회원가입&nbsp;</a>
+          </div>
+                            <!-- 로그인 후-->
+                    <!-- <div class="dropdown nav d-none d-sm-block order-lg-3"><a class="nav-link d-flex align-items-center p-0"
+                      href="#" data-bs-toggle="dropdown" aria-expanded="false"><img class="m-lg-1"
+                        src="../img/sabuzak_logo_black.png" width="55" alt="Isabella Bocouse">
+                      <div class="ps-2">
+                        <div class="fs-xs lh-1 opacity-60">안녕하세요.</div>
+                        <div class="fs-sm dropdown-toggle" id="name">김땡땡</div>
+                      </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end my-1">
+                      <h6 class="dropdown-header fs-xs fw-medium text-muted text-uppercase pb-1">내 계정</h6>
+                      <a class="dropdown-item" href="mypage.html"><i class="ai-user-check fs-lg opacity-70 me-2"></i>마이페이지</a>
+                      <a class="dropdown-item" href="myArticle.html"><i class="ai-messages fs-lg opacity-70 me-2"></i>내가 쓴
+                        글보기</a>
+                      <a class="dropdown-item" href="antiWishlist.html"><i class="ai-heart fs-lg opacity-70 me-2"></i>내가 찜한
+                        유물</a>
+                      <a class="dropdown-item" href="museumWishlist.html"><i class="ai-heart fs-lg opacity-70 me-2"></i>내가 찜한
+                        박물관</a>
+                      <div class="dropdown-divider"></div><a class="dropdown-item" href="index.html"><i
+                          class="ai-logout fs-lg opacity-70 me-2"></i>로그아웃</a>
+                    </div>
+                  </div> -->
+          
+          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+          <nav class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
+              <li class="nav-item"><a class="nav-link" href="intro.html">사부작소개</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="museumSearch.html">박물관</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="antiquitySearch.html">유물</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="exhibition.html">특별전시</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="Board.html">게시판</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="notice.html">공지사항</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="mypage.html">마이페이지</a>
+            </ul>
+              </ul>
+          </nav>
+        </div>
+      </header>
+ <div class="body">     
+        <!-- 헤더 네비 아래 가운데 큰 배경들-->
+        <section>
+            <div class="jarallax bg-dark min-vh-40 py-4" data-jarallax data-type="scroll-opacity" data-speed="0.7">
+              <div class="jarallax-img"><img src="../img/loginimg.png" style="height: 100%; width: 100%;"></div>
+              <div class="container position-relative zindex-5 py-sm-4 py-lg-5 mt-4">
+
+                    <h3 class=" text-light  pb-sm-2 pb-md-3" style="margin-top: 8%; display: flex; justify-content: center;">박물관 검색</h3>
+                    <h5 class="text-light opacity-70 pb-3 pb-md-4 mb-3" style="display: flex; justify-content: center;">전국에 있는 박물관을 검색해보세요.</h5>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                </div>
+
+
+<div class="container mu-search">
+  <div class="search-bar p-3 position-relative mt-n5 z-index-20 mu-search-bar">
+      <div class="row1">
+        <div class="d-flex align-items-center form-group region">지역</div>
+        <div class="d-flex align-items-center form-group no-divider selectbox">
+       <form name=form method=post action="$PHP_SELF">
+        <select name='city' onchange="change(this.selectedIndex);"  class="input" data-style="btn-form-control">
+            <option value='전체'>전체</option>
+            <option value='서울'>서울특별시</option>
+            <option value='부산'>부산광역시</option>
+            <option value='대구'>대구광역시</option>
+            <option value='인천'>인천광역시</option>
+            <option value='광주'>광주광역시</option>
+            <option value='대전'>대전광역시</option>
+            <option value='울산'>울산광역시</option>
+            <option value='세종'>세종특별자치시</option>
+            <option value='경기'>경기도</option>
+            <option value='강원'>강원도</option>
+            <option value='충북'>충청북도</option>
+            <option value='충남'>충청남도</option>
+            <option value='전북'>전라북도</option>
+            <option value='전남'>전라남도</option>
+            <option value='경북'>경상북도</option>
+            <option value='경남'>경상남도</option>
+            <option value='제주'>제주도</option>
+         </select>                                                  
+         <select name='county' class="select">
+            <option value='전체'>전체</option>
+         </select>
+         
+         <div class="form-group d-grid mb-0 mapbutton">
+           <button class="btn btn-primary h-100 map-text"><a href="map.html"><i class="bi bi-geo-alt"></i>지도보기</a></button>
+             </div>
+        
+             <div class="form-group d-grid mb-0 resetbutton">
+              <button class="btn btn-primary h-100" type="reset" id="resetbutton"><i class="bi bi-arrow-clockwise">초기화</i></button>
+             </div>
+             <div class="searchbutton">
+              <button class="btn btn-primary h-100" type="submit">검색</button>
+             </div>
+        </form>  
+      </div>
+
+         
+    </div>  
+    </div>
+    </div>
+
+
+<!-- Home icon -->
+<div class="home-mu">
+    <!--breadcrumb-->
+    <ol id="bc2" class="breadcrumb">
+      <li class="breadcrumb-item doing">
+        <a href="index.html">
+          <i class="ai-home fs-base me-2"></i>
+          Home
+        </a>
+      </li>
+      <li class="breadcrumb-item"><a href="museumSearch.html">박물관</a></li>
+      <li class="breadcrumb-item active" aria-current="page" id="antName" name="antName">박물관검색</li>
+    </ol>
+  </div>
+
+  <!--박물관 리스트-->
+  <div class="row museum-card">
+    <div class="col-12 museum-detail mb-3">
+        <div class="card border-light mb-4 animate-up-5">
+            <div class="row no-gutters align-items-center">
+                <div class="col-12 col-lg-6 col-xl-5">
+                    <a href="#">
+                        <img src="" alt="박물관 사진" class="card-img p-2 rounded-xl">
+                    </a>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-7">
+                    <div class="card-body">
+                        <a href="#">
+                          <!--박물관명-->
+                            <h4 class="h5">museName</h4>
+                        </a>
+                        <i class="bi bi-heart heart" type="button"></i>
+                        <div class="d-flex my-3">
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span>
+                            <span class="badge badge-pill badge-primary ml-2">5.0</span>
+                        </div> 
+                        <ul class="list-group mb-3">
+                          <!--박물관 주소-->
+                            <li class="list-group-item p-0"><span class="fas fa-map-marker-alt mr-2"></span> museRdnmadr</li>
+                            <!--전화번호-->
+                            <li class="list-group-item p-0"><span class="bi bi-telephone"></span> musePhone</li>
+                        </ul>
+                        <div class="d-flex justify-content-between">
+                            <div class="col pl-0">
+                                <span class="text-muted font-small d-block">운영시간</span>
+                                <span class="h6 text-dark font-weight-bold">museWeekOpen~museWeekClose</span>
+                            </div>
+                            <div class="col">
+                                <span class="text-muted font-small d-block">입장료</span>
+                                <span class="h6 text-dark font-weight-bold">museCharge</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 museum-detail mb-3">
+        <div class="card border-light mb-4 animate-up-5">
+            <div class="row no-gutters align-items-center">
+                <div class="col-12 col-lg-6 col-xl-5">
+                    <a href="#">
+                        <img src="" alt="박물관 사진" class="card-img p-2 rounded-xl">
+                    </a>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-7">
+                    <div class="card-body">
+                        <a href="#">
+                          <!--박물관명-->
+                            <h4 class="h5">museName</h4>
+                        </a>
+                        <i class="bi bi-heart heart" type="button"></i>
+                        <div class="d-flex my-3">
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span>
+                            <span class="badge badge-pill badge-primary ml-2">5.0</span>
+                        </div> 
+                        <ul class="list-group mb-3">
+                          <!--박물관 주소-->
+                            <li class="list-group-item p-0"><span class="fas fa-map-marker-alt mr-2"></span> museRdnmadr</li>
+                            <!--전화번호-->
+                            <li class="list-group-item p-0"><span class="bi bi-telephone"></span> musePhone</li>
+                        </ul>
+                        <div class="d-flex justify-content-between">
+                            <div class="col pl-0">
+                                <span class="text-muted font-small d-block">운영시간</span>
+                                <span class="h6 text-dark font-weight-bold">museWeekOpen~museWeekClose</span>
+                            </div>
+                            <div class="col">
+                                <span class="text-muted font-small d-block">입장료</span>
+                                <span class="h6 text-dark font-weight-bold">museCharge</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 museum-detail mb-3">
+        <div class="card border-light mb-4 animate-up-5">
+            <div class="row no-gutters align-items-center">
+                <div class="col-12 col-lg-6 col-xl-5">
+                    <a href="#">
+                        <img src="" alt="박물관 사진" class="card-img p-2 rounded-xl">
+                    </a>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-7">
+                    <div class="card-body">
+                        <a href="#">
+                          <!--박물관명-->
+                            <h4 class="h5">museName</h4>
+                        </a>
+                        <i class="bi bi-heart heart" type="button"></i>
+                        <div class="d-flex my-3">
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span>
+                            <span class="badge badge-pill badge-primary ml-2">5.0</span>
+                        </div> 
+                        <ul class="list-group mb-3">
+                          <!--박물관 주소-->
+                            <li class="list-group-item p-0"><span class="fas fa-map-marker-alt mr-2"></span> museRdnmadr</li>
+                            <!--전화번호-->
+                            <li class="list-group-item p-0"><span class="bi bi-telephone"></span> musePhone</li>
+                        </ul>
+                        <div class="d-flex justify-content-between">
+                            <div class="col pl-0">
+                                <span class="text-muted font-small d-block">운영시간</span>
+                                <span class="h6 text-dark font-weight-bold">museWeekOpen~museWeekClose</span>
+                            </div>
+                            <div class="col">
+                                <span class="text-muted font-small d-block">입장료</span>
+                                <span class="h6 text-dark font-weight-bold">museCharge</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 museum-detail mb-3">
+        <div class="card border-light mb-4 animate-up-5">
+            <div class="row no-gutters align-items-center">
+                <div class="col-12 col-lg-6 col-xl-5">
+                    <a href="#">
+                        <img src="" alt="박물관 사진" class="card-img p-2 rounded-xl">
+                    </a>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-7">
+                    <div class="card-body">
+                        <a href="#">
+                          <!--박물관명-->
+                            <h4 class="h5">museName</h4>
+                        </a>
+                        <i class="bi bi-heart heart" type="button"></i>
+                        <div class="d-flex my-3">
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span>
+                            <span class="badge badge-pill badge-primary ml-2">5.0</span>
+                        </div> 
+                        <ul class="list-group mb-3">
+                          <!--박물관 주소-->
+                            <li class="list-group-item p-0"><span class="fas fa-map-marker-alt mr-2"></span> museRdnmadr</li>
+                            <!--전화번호-->
+                            <li class="list-group-item p-0"><span class="bi bi-telephone"></span> musePhone</li>
+                        </ul>
+                        <div class="d-flex justify-content-between">
+                            <div class="col pl-0">
+                                <span class="text-muted font-small d-block">운영시간</span>
+                                <span class="h6 text-dark font-weight-bold">museWeekOpen~museWeekClose</span>
+                            </div>
+                            <div class="col">
+                                <span class="text-muted font-small d-block">입장료</span>
+                                <span class="h6 text-dark font-weight-bold">museCharge</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 museum-detail mb-3">
+        <div class="card border-light mb-4 animate-up-5">
+            <div class="row no-gutters align-items-center">
+                <div class="col-12 col-lg-6 col-xl-5">
+                    <a href="#">
+                        <img src="" alt="박물관 사진" class="card-img p-2 rounded-xl">
+                    </a>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-7">
+                    <div class="card-body">
+                        <a href="#">
+                          <!--박물관명-->
+                            <h4 class="h5">museName</h4>
+                        </a>
+                        <i class="bi bi-heart heart" type="button"></i>
+                        <div class="d-flex my-3">
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span>
+                            <span class="badge badge-pill badge-primary ml-2">5.0</span>
+                        </div> 
+                        <ul class="list-group mb-3">
+                          <!--박물관 주소-->
+                            <li class="list-group-item p-0"><span class="fas fa-map-marker-alt mr-2"></span> museRdnmadr</li>
+                            <!--전화번호-->
+                            <li class="list-group-item p-0"><span class="bi bi-telephone"></span> musePhone</li>
+                        </ul>
+                        <div class="d-flex justify-content-between">
+                            <div class="col pl-0">
+                                <span class="text-muted font-small d-block">운영시간</span>
+                                <span class="h6 text-dark font-weight-bold">museWeekOpen~museWeekClose</span>
+                            </div>
+                            <div class="col">
+                                <span class="text-muted font-small d-block">입장료</span>
+                                <span class="h6 text-dark font-weight-bold">museCharge</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 museum-detail mb-3">
+        <div class="card border-light mb-4 animate-up-5">
+            <div class="row no-gutters align-items-center">
+                <div class="col-12 col-lg-6 col-xl-5">
+                    <a href="#">
+                        <img src="" alt="박물관 사진" class="card-img p-2 rounded-xl">
+                    </a>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-7">
+                    <div class="card-body">
+                        <a href="#">
+                          <!--박물관명-->
+                            <h4 class="h5">museName</h4>
+                        </a>
+                        <i class="bi bi-heart heart" type="button"></i>
+                        <div class="d-flex my-3">
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span> 
+                            <span class="star fas fa-star text-warning"></span>
+                            <span class="badge badge-pill badge-primary ml-2">5.0</span>
+                        </div> 
+                        <ul class="list-group mb-3">
+                          <!--박물관 주소-->
+                            <li class="list-group-item p-0"><span class="fas fa-map-marker-alt mr-2"></span> museRdnmadr</li>
+                            <!--전화번호-->
+                            <li class="list-group-item p-0"><span class="bi bi-telephone"></span> musePhone</li>
+                        </ul>
+                        <div class="d-flex justify-content-between">
+                            <div class="col pl-0">
+                                <span class="text-muted font-small d-block">운영시간</span>
+                                <span class="h6 text-dark font-weight-bold">museWeekOpen~museWeekClose</span>
+                            </div>
+                            <div class="col">
+                                <span class="text-muted font-small d-block">입장료</span>
+                                <span class="h6 text-dark font-weight-bold">museCharge</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+<div class="col col-md-4 col-6 order-md-3 order-2 listnumber">
+  <nav aria-label="Page navigation">
+    <ul class="pagination listnumbersize justify-content-center">
+      <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+      <li class="page-item active" aria-current="page"><span class="page-link">1<span class="visually-hidden">(current)</span></span></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">4</a></li>
+      <li class="page-item"><a class="page-link" href="#">5</a></li>
+      <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+
+    </ul>
+  </nav>
+</div>
+
+</div>
+
+    <!-- Footer-->
+   <footer class="footer py-5">
+    <div class="container pt-md-2 pt-lg-3 pt-xl-4">
+      <div class="row pb-5 pt-sm-2 mb-lg-2">
+        <div class="col-md-12 col-lg-3 pb-2 pb-lg-0 mb-4 mb-lg-0"><a class="navbar-brand py-0 mb-3 mb-lg-4"
+            href="index.html"><span class="text-primary flex-shrink-0 me-2">
+              <img version="1.1" width="80" height="60" viewBox="0 0 36 33" src="../img/sabuzak_logo_black.png" />
+              <path fill="currentColor"
+                d="M35.6,29c-1.1,3.4-5.4,4.4-7.9,1.9c-2.3-2.2-6.1-3.7-9.4-3.7c-3.1,0-7.5,1.8-10,4.1c-2.2,2-5.8,1.5-7.3-1.1c-1-1.8-1.2-4.1,0-6.2l0.6-1.1l0,0c0.6-0.7,4.4-5.2,12.5-5.7c0.5,1.8,2,3.1,3.9,3.1c2.2,0,4.1-1.9,4.1-4.2s-1.8-4.2-4.1-4.2c-2,0-3.6,1.4-4,3.3H7.7c-0.8,0-1.3-0.9-0.9-1.6l5.6-9.8c2.5-4.5,8.8-4.5,11.3,0L35.1,24C36,25.7,36.1,27.5,35.6,29z">
+              </path>
+              </svg>
+            </span><span class="text-nav">사부작</span></a>
+          <p id="asdmflasdkmfdlas" class="fs-xs pb-2 pb-lg-3 mb-3">사부작은 유물과 전국 박물관에 대한 정보를 제공함으로써<br/>현대인들에게 보다 쉽게 역사에
+            다가갈 수 있도록 합니다.</p>
+          <div class="d-flex"><a class="btn btn-icon btn-sm btn-secondary btn-facebook rounded-circle me-3" href="#">
+            <i class="ai-facebook"></i></a>
+            <a class="btn btn-icon btn-sm btn-secondary btn-instagram rounded-circle me-3" href="#">
+              <i class="ai-instagram"></i></a>
+            <a class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle" href="#">
+              <i class="ai-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-2 offset-xl-1 mb-4 mb-sm-0">
+          <ul class="nav flex-column">
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="intro.html">사부작 소개</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="notice.html">공지사항</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="museumSearch.html">박물관</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="antiquitySearch.html">유물</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="exhibition.html">특별전시</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="Board.html">게시판</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4 col-lg-2 mb-4 mb-sm-0">
+          <ul class="nav flex-column">
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="mailto:sabuzak@multi.com">sabuzak@multi.com</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="tel:+821234567">+82 123 4567</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="tel:+828901234">+82 890 1234</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-5 col-lg-4 col-xl-3 offset-lg-1">
+          <h3 class="h6 mb-2">사부작의 소식을 구독해보세요.</h3>
+          <p class="fs-sm">새로운 유물 소식을 놓치지 마세요!</p>
+          <div class="input-group input-group-sm">
+            <input class="form-control" type="text" placeholder="Your email">
+            <button class="btn btn-primary" type="button">구독하기</button>
+          </div>
+        </div>
+      </div>
+      <p class="fs-sm mb-0"><span class="opacity-70">&copy; 2022, Sabuzak, Korea. All rights reserved. </span><a
+          class="nav-link d-inline fw-normal p-0" href="index.html" target="_blank" rel="noopener">Sabuzak
+          </a></p>
+    </div>
+  </footer>
+          
+  </main>
+
+  </body>
+  <script>
+    var i = 0;
+    $('.bi-heart').on('click',function(){
+        if(i==0){
+            $(this).removeClass('bi-heart');
+            $(this).addClass('bi-heart-fill');
+            i++;
+        }else if(i==1){
+            $(this).removeClass('bi-heart-fill');
+            $(this).addClass('bi-heart');
+            i--;
+        }
+        
+    });
+  
+  </script>
+
+  <script language='javascript'>
+    var cnt = new Array();
+     cnt[0] = new Array('전체');
+     cnt[1] = new Array('전체','강남구','강동구','강북구','강서구','관악구','광진구','구로구','금천구','노원구','도봉구','동대문구','동작구','마포구','서대문구','서초구','성동구','성북구','송파구','양천구','영등포구','용산구','은평구','종로구','중구','중랑구');
+     cnt[2] = new Array('전체','강서구','금정구','남구','동구','동래구','부산진구','북구','사상구','사하구','서구','수영구','연제구','영도구','중구','해운대구','기장군');
+     cnt[3] = new Array('전체','남구','달서구','동구','북구','서구','수성구','중구','달성군');
+     cnt[4] = new Array('전체','계양구','남구','남동구','동구','부평구','서구','연수구','중구','강화군','옹진군');
+     cnt[5] = new Array('전체','광산구','남구','동구','북구','서구');
+     cnt[6] = new Array('전체','대덕구','동구','서구','유성구','중구');
+     cnt[7] = new Array('전체','남구','동구','북구','중구','울주군');
+     cnt[8] = new Array('전체');
+     cnt[9] = new Array('전체','고양시','과천시','광명시','구리시','군포시','남양주시','동두천시','부천시','성남시','수원시','시흥시','안산시','안양시','오산시','의왕시','의정부시','평택시','하남시','가평군','광주시','김포시','안성시','양주군','양평군','여주군','연천군','용인시','이천군','파주시','포천시','화성시');
+     cnt[10] = new Array('전체','강릉시','동해시','삼척시','속초시','원주시','춘천시','태백시','고성군','양구군','양양군','영월군','인제군','정선군','철원군','평창군','홍천군','화천군','황성군');
+     cnt[11] = new Array('전체','제천시','청주시','충주시','괴산군','단양군','보은군','영동군','옥천군','음성군','진천군','청원군');
+     cnt[12] = new Array('전체','공주시','보령시','서산시','아산시','천안시','금산군','논산군','당진군','부여군','서천군','연기군','예산군','청양군','태안군','홍성군');
+     cnt[13] = new Array('전체','군산시','김제시','남원시','익산시','전주시','정읍시','고창군','무주군','부안군','순창군','완주군','임실군','장수군','진안군');
+     cnt[14] = new Array('전체','광양시','나주시','목포시','순천시','여수시','여천시','강진군','고흥군','곡성군','구례군','담양군','무안군','보성군','신안군','여천군','영광군','영암군','완도군','장성군','장흥군','진도군','함평군','해남군','화순군');
+     cnt[15] = new Array('전체','경산시','경주시','구미시','김천시','문경시','상주시','안동시','영주시','영천시','포항시','고령군','군위군','봉화군','성주군','영덕군','영양군','예천군','울릉군','울진군','의성군','청도군','청송군','칠곡군');
+     cnt[16] = new Array('전체','거제시','김해시','마산시','밀양시','사천시','울산시','진주시','진해시','창원시','통영시','거창군','고성군','남해군','산청군','양산시','의령군','창녕군','하동군','함안군','함양군','합천군');
+     cnt[17] = new Array('전체','서귀포시','제주시','남제주군','북제주군');
+     function change(add) {
+        sel=document.form.county
+          /* 옵션메뉴삭제 */
+          for (i=sel.length-1; i>=0; i--){
+           sel.options[i] = null
+           }
+         /* 옵션박스추가 */
+          for (i=0; i < cnt[add].length;i++){                     
+           sel.options[i] = new Option(cnt[add][i], cnt[add][i]);
+          }         
+      }
+              
+  </script>
+
+  
+</html>

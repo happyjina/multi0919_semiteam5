@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+
+<mapper namespace="com.multi.mvc.antiquity.model.mapper.AntiquityMapper">
+
+	<resultMap type="Antiquity" id="antiquityListResultMap">
+		<id property="antNo" column="antNo"/>
+		<result property="antId" column="antId"/>
+		<result property="antName" column="antName"/>
+		<result property="antNameKr" column="antNameKr"/>
+		<result property="antNameCn" column="antNameCn"/>
+		<result property="antAuthor" column="antAuthor"/>
+		<result property="antIndexWord" column="antIndexWord"/>
+		<result property="antMuseumName1" column="antMuseumName1"/>
+		<result property="antMuseumName2" column="antMuseumName2"/>
+		<result property="antMuseumName3" column="antMuseumName3"/>
+		<result property="antImgUri" column="antImgUri"/>
+		<result property="antImgThumUriS" column="antImgThumUriS"/>
+		<result property="antImgThumUriM" column="antImgThumUriM"/>
+		<result property="antImgThumUriL" column="antImgThumUriL"/>
+		<result property="antNationalityName1" column="antNationalityName1"/>
+		<result property="antNationalityName2" column="antNationalityName2"/>
+		<result property="antMaterialName1" column="antMaterialName1"/>
+		<result property="antMaterialName2" column="antMaterialName2"/>
+		<result property="antPurposeName1" column="antPurposeName1"/>
+		<result property="antPurposeName2" column="antPurposeName2"/>
+		<result property="antPurposeName3" column="antPurposeName3"/>
+		<result property="antPurposeName4" column="antPurposeName4"/>
+		<result property="antSizeRangeName" column="antSizeRangeName"/>
+		<result property="antPlaceLandName1" column="antPlaceLandName1"/>
+		<result property="antPlaceLandName2" column="antPlaceLandName2"/>
+		<result property="antDesignationName1" column="antDesignationName1"/>
+		<result property="antDesignationCode1" column="antDesignationCode1"/>
+		<result property="antSizeInfo" column="antSizeInfo"/>
+		<result property="antDesc" column="antDesc"/>
+	</resultMap>
+
+	<resultMap type="AntiReply" id="antiquityReplyResultMap">
+		<id 	property="aReplyNo"			column="aReplyNo"/>
+		<result property="antNo" 		column="antNo"/>
+		<result property="memberNo" 	column="memberNo"/>
+		<result property="content" 		column="content"/>
+		<result property="good" 	column="good"/>
+		<result property="bad" 	column="bad"/>
+		<result property="createDate" 	column="createDate"/>
+		<result property="modifyDate" 	column="modifyDate"/>
+	</resultMap>
+		
+	
+	<resultMap type="Antiquity" id="antiquityDetailResultMap" extends="antiquityListResultMap">
+		<collection property="replies" javaType="arrayList" columnPrefix="R_" 
+												resultMap="antiquityReplyResultMap"/>
+	</resultMap>
+	
+	<!-- MySQL의 페이징 기능을 활용한 코드 -->
+	<select id="selectAntiquityList"
+	resultMap="antiquityListResultMap" parameterType="map">
+	SELECT
+		antNo,antId,antName,antNameKr,antNameCn,antAuthor,antIndexWord,antMuseumName1,
+		antMuseumName2,antMuseumName3,antImgUri,antImgThumUriS,antImgThumUriM,antImgThumUriL,
+		antNationalityName1,antNationalityName2,antMaterialName1,antMaterialName2,antPurposeName1,
+		antPurposeName2,antPurposeName3,antPurposeName4,antSizeRangeName,antPlaceLandName1,antPlaceLandName2,
+		antDesignationName1,antDesignationCode1,antSizeInfo,antDesc
+	FROM ANTIQUITY
+	WHERE 1=1
+	<if test="antNationalityName1 != null">
+		AND antNationalityName1 LIKE '%${antNationalityName1}%'
+	</if>
+	<if test="antNationalityName2 != null">
+		AND antNationalityName2 LIKE '%${antNationalityName2}%'
+	</if>
+	<if test="antPlaceLandName1 != null">
+		AND antPlaceLandName1 LIKE '%${antPlaceLandName1}%'
+	</if>
+	<if test="antPlaceLandName2 != null">
+		AND antPlaceLandName2 LIKE '%${antPlaceLandName2}%'
+	</if>
+	<if test="antMaterialName1 != null">
+		AND antMaterialName1 LIKE '%${antMaterialName1}%'
+	</if>
+	<if test="antMaterialName2 != null">
+		AND antMaterialName2 LIKE '%${antMaterialName2}%'
+	</if>
+	ORDER BY antNo DESC LIMIT ${limit} OFFSET ${offset}
+</select>
+	
+	
+	<select id="selectAntiquityCount" resultType="int" parameterType="map">
+		SELECT  
+			COUNT(*)
+		FROM ANTIQUITY
+		WHERE 1=1
+		<if test="antNationalityName1 != null">
+			AND antNationalityName1 LIKE '%${antNationalityName1}%' 
+		</if>		
+		<if test="antNationalityName2 != null">
+			AND antNationalityName2 LIKE '%${antNationalityName2}%' 
+		</if>		
+		<if test="antPlaceLandName1 != null">
+			AND antPlaceLandName1 LIKE '%${antPlaceLandName1}%' 
+		</if>
+		<if test="antPlaceLandName2 != null">
+			AND antPlaceLandName2 LIKE '%${antPlaceLandName2}%' 
+		</if>
+		<if test="antMaterialName1 != null">
+			AND antMaterialName1 LIKE '%${antMaterialName1}%' 
+		</if>	
+		<if test="antMaterialName2 != null">
+			AND antMaterialName2 LIKE '%${antMaterialName2}%' 
+		</if>		
+	</select>
+	
+	<select id="selectAntiquityByNo" parameterType="int" resultMap="antiquityListResultMap">
+	SELECT
+	a.antNo,a.antId,a.antName,a.antNameKr,a.antNameCn,a.antAuthor,a.antIndexWord,a.antMuseumName1,
+	a.antMuseumName2,a.antMuseumName3,a.antImgUri,a.antImgThumUriS,a.antImgThumUriM,a.antImgThumUriL,
+	a.antNationalityName1,a.antNationalityName2,a.antMaterialName1,a.antMaterialName2,a.antPurposeName1,
+	a.antPurposeName2,a.antPurposeName3,a.antPurposeName4,a.antSizeRangeName,a.antPlaceLandName1,a.antPlaceLandName2,
+	a.antDesignationName1,a.antDesignationCode1,a.antSizeInfo,a.antDesc,
+	r.aReplyNo as R_aReplyNo, r.memberNo as R_memberNo, r.content as R_content, r.good as R_good,
+	 r.bad as R_bad, r.STATUS as R_STATUS, r.createDate as R_createDate, r.modifyDate as R_modifyDate,
+	M2.id as R_id
+	FROM ANTIQUITY A
+	LEFT OUTER JOIN A_REPLY R ON (A.antNo = R.antNo)
+	LEFT OUTER JOIN MEMBER M2 ON (R.memberNo = M2.memberNo)
+	WHERE A.antNo = #{antNo}
+	</select>
+	
+	<select id="selectAntReplesByNo" parameterType="int" resultMap="antiquityDetailResultMap">
+		SELECT  
+			r.aReplyNo, r.memberNo, r.content, r.good, r.bad, r.STATUS, r.createDate, r.modifyDate,
+			M2.id
+		FROM ANTIQUITY A
+		LEFT OUTER JOIN A_REPLY R ON (A.antNo = R.antNo)
+		LEFT OUTER JOIN MEMBER M2 ON (R.memberNo = M2.memberNo)
+		LEFT OUTER JOIN bookmark_ant b ON (b.antNo = A.antNo)
+		WHERE A.antNo = #{antNo} and r.STATUS = 'Y'
+	</select>
+	
+	<select id="selectAntBookmarkByNo" parameterType="int" resultMap="antiquityDetailResultMap">
+		SELECT  
+			b.bookmarkAntNo
+		FROM ANTIQUITY A
+		LEFT OUTER JOIN A_REPLY R ON (A.antNo = R.antNo)
+		LEFT OUTER JOIN MEMBER M2 ON (R.memberNo = M2.memberNo)
+		LEFT OUTER JOIN bookmark_ant b ON (b.antNo = A.antNo)
+		WHERE A.antNo = #{antNo}
+	</select>
+	
+	<insert id="insertAntiquity" parameterType="Antiquity">
+		INSERT INTO ANTIQUITY(
+			antNo, antName, antNameKr, antNameCn, antAuthor, antIndexWord,  
+			antMuseumName1, antMuseumName2, antMuseumName3, antImgUri, 
+			antImgThumUriS, antImgThumUriM, antImgThumUriL, antNationalityName1, 
+			antNationalityName2, antMaterialName1, antMaterialName2, 
+			antPurposeName1, antPurposeName2, antPurposeName3, 
+			antPurposeName4, antSizeRangeName, antPlaceLandName1, 
+			antPlaceLandName2, antDesignationName1, antDesignationCode1, 
+			antSizeInfo, antDesc	
+		) VALUES (
+			0, #{antName}, #{antNameKr}, #{antNameCn}, #{antAuthor}, 
+			#{antIndexWord}, #{antMuseumName1}, #{antMuseumName2}, 
+			#{antMuseumName3}, #{antImgUri}, #{antImgThumUriS},  
+			#{antImgThumUriM}, #{antImgThumUriL}, #{antNationalityName1}, 
+			#{antNationalityName2}, #{antMaterialName1}, #{antMaterialName2}, 
+			#{antPurposeName1}, #{antPurposeName2}, #{antPurposeName3}, 
+			#{antPurposeName4}, #{antSizeRangeName}, #{antPlaceLandName1}, 
+			#{antPlaceLandName2}, #{antDesignationName1}, #{antDesignationCode1}, 
+			#{antSizeInfo}, #{antDesc} 			
+		)
+	</insert>
+	
+
+	<insert id="a_insertReply" parameterType="AntiReply">
+		INSERT INTO A_REPLY(
+				aReplyNo, antNo, memberNo, 
+				content, good, bad, STATUS, createDate, modifyDate) 
+			VALUES(
+				0, #{antNo}, #{memberNo}, #{content}, #{good}, #{bad},
+				DEFAULT, DEFAULT, DEFAULT
+			)
+	</insert>
+	
+	<update id="updateAntiquity" parameterType="Antiquity">
+		UPDATE BOARD
+		SET
+			antId = #{antId}, antName = #{antName}, antNameKr = #{antNameKr}, antNameCn = #{antNameCn}, 
+			antAuthor = #{antAuthor}, antIndexWord = #{antIndexWord}, antMuseumName1 = #{antMuseumName1}, 
+			antMuseumName2 = #{antMuseumName2}, antMuseumName3 = #{antMuseumName3}, antImgUri = #{antImgUri}, 
+			antImgThumUriS = #{antImgThumUriS}, antImgThumUriM = #{antImgThumUriM}, antImgThumUriL = #{antImgThumUriL}, 
+			antNationalityName1 = #{antNationalityName1}, antNationalityName2 = #{antNationalityName2}, 
+			antMaterialName1 = #{antMaterialName1}, antMaterialName2 = #{antMaterialName2}, 
+			antPurposeName1 = #{antPurposeName1}, antPurposeName2 = #{antPurposeName2}, antPurposeName3 = #{antPurposeName3}, 
+			antPurposeName4 = #{antPurposeName4}, antSizeRangeName = #{antSizeRangeName}, 
+            antPlaceLandName1 = #{antPlaceLandName1}, antPlaceLandName2 = #{antPlaceLandName2}, 
+            antDesignationName1 = #{antDesignationName1}, antDesignationCode1 = #{antDesignationCode1}, 
+            antSizeInfo = #{antSizeInfo}, antDesc = #{antDesc}  
+		WHERE
+			NO=#{no}
+	</update>
+	
+	<update id="updateAntReply" parameterType="AntiReply">
+		UPDATE A_REPLY 
+		SET 
+			content=#{content}, modifyDate=CURRENT_TIMESTAMP
+		WHERE
+			aReplyNo=#{aReplyNo}
+	</update>
+	
+	<update id="updateAntReplyGood" parameterType="map">
+		UPDATE A_REPLY SET good=#{good} WHERE aReplyNo=#{aReplyNo}
+	</update>
+	
+	<update id="updateAntReplyBad" parameterType="map">
+		UPDATE A_REPLY SET bad=#{bad} WHERE aReplyNo=#{aReplyNo}
+	</update>
+	
+	<update id="deleteAntiquity" parameterType="int">
+		DELETE FROM ANTIQUITY WHERE antNo=#{antNo}
+	</update>
+	
+	<update id="deleteAntReply" parameterType="int">
+		UPDATE A_REPLY SET STATUS='N' WHERE aReplyNo=#{aReplyNo}
+	</update>
+	
+	<delete id="deleteAntReply2" parameterType="int">
+		DELETE FROM A_REPLY WHERE aReplyNo=#{aReplyNo}
+	</delete>
+	
+
+</mapper>

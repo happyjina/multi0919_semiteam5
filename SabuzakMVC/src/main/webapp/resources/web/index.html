@@ -1,0 +1,610 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>사부작 </title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Around - Multipurpose Bootstrap HTML Template">
+    <meta name="keywords" content="bootstrap, business, corporate, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, saas, multipurpose, product landing, shop, software, ui kit, web studio, landing, dark mode, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/sabuzak_logo_black.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/sabuzak_logo_black.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/sabuzak_logo_black.png">
+    <link rel="manifest" href="../img/sabuzak_logo_black.png">
+    <link rel="mask-icon" color="#6366f1" href="../img/sabuzak_logo_black.png">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" href="../img/sabuzak_logo_black.png">
+    <meta name="theme-color" content="white">
+    <!-- Theme mode-->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== undefined && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+      
+      
+    </script>
+    
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1500);
+        };
+      })();
+      
+    </script>
+    <!-- Import Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" id="google-font">
+    <!-- Vendor styles-->
+    <link rel="stylesheet" media="screen" href="../css/swiper-bundle.min.css"/>
+    <!-- Google fonts - Playfair Display-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700">
+    <!-- Google fonts - Poppins-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700">
+
+    <!--스타일 적용-->
+    <link rel="stylesheet" href="../css/index.css">
+
+   <link rel="stylesheet" href="../css/_icons.scss">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+  </head>
+
+  <!-- Body-->
+  <body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+    <!-- Page wrapper-->
+    
+    <main class="page-wrapper">
+
+      <!--헤더부분~~~~-->
+      
+      <header class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container"><a class="navbar-brand pe-sm-3" href="index.html">
+          <img src="../img/logo_small1.png">
+          <span class="d-none d-sm-inline">사부작</span></a>
+          <div class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto" data-bs-toggle="mode">
+            <a class="btn btn-primary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex" href="login.html" target="_blank" rel="noopener">&nbsp;로그인&nbsp; </a>
+            <a class="btn btn-primary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex" href="enroll.html" target="_blank" rel="noopener">&nbsp;회원가입&nbsp;</a>
+        </div>
+                    <!-- 로그인 후-->
+                    <!-- <div class="dropdown nav d-none d-sm-block order-lg-3"><a class="nav-link d-flex align-items-center p-0"
+                      href="#" data-bs-toggle="dropdown" aria-expanded="false"><img class="m-lg-1"
+                        src="../img/sabuzak_logo_black.png" width="55" alt="Isabella Bocouse">
+                      <div class="ps-2">
+                        <div class="fs-xs lh-1 opacity-60">안녕하세요.</div>
+                        <div class="fs-sm dropdown-toggle" id="name">김땡땡</div>
+                      </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end my-1">
+                      <h6 class="dropdown-header fs-xs fw-medium text-muted text-uppercase pb-1">내 계정</h6>
+                      <a class="dropdown-item" href="mypage.html"><i class="ai-user-check fs-lg opacity-70 me-2"></i>마이페이지</a>
+                      <a class="dropdown-item" href="myArticle.html"><i class="ai-messages fs-lg opacity-70 me-2"></i>내가 쓴
+                        글보기</a>
+                      <a class="dropdown-item" href="antiWishlist.html"><i class="ai-heart fs-lg opacity-70 me-2"></i>내가 찜한
+                        유물</a>
+                      <a class="dropdown-item" href="museumWishlist.html"><i class="ai-heart fs-lg opacity-70 me-2"></i>내가 찜한
+                        박물관</a>
+                      <div class="dropdown-divider"></div><a class="dropdown-item" href="index.html"><i
+                          class="ai-logout fs-lg opacity-70 me-2"></i>로그아웃</a>
+                    </div>
+                  </div> -->
+          
+          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+          <nav class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
+              
+              <li class="nav-item"><a class="nav-link" href="intro.html" >사부작소개</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="museumSearch.html" >박물관</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="antiquitySearch.html" >유물</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="exhibition.html" >특별전시</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="Board.html" >게시판</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="notice.html" >공지사항</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="mypage.html" >마이페이지</a>
+              </li>
+              </ul>
+          </nav>
+        </div>
+      </header>
+      <!--배경-->
+      <section>
+      <div class="index-mid" style="background-image: url(../img/back.JPG);">
+        <!-- 헤더 네비 아래 가운데 큰 배경들-->
+        <div>
+            <div class="jarallax bg-dark min-vh-40 py-4" data-jarallax data-type="scroll-opacity" data-speed="0.7" style="height: 400px;">
+              <div class="jarallax-img"><img src="../img/index.jpg" style="width: 100%; height: 400px;"></div>
+              <div class="container position-relative zindex-5 py-sm-4 py-lg-5 mt-4">
+
+                    <h1 class="display-4 text-light text-lowercase pb-sm-2 pb-md-3" style="margin-top: 2%;">사부작에 오신걸 환영합니다</h1>
+                    <h3 class="text-light opacity-70 pb-3 pb-md-4 mb-3" style="max-width: 520px;">온라인으로 다양한 유물을 보세요</h3>
+                  </div>
+                </div>
+           </div>
+                  
+                    <!-- 박물관 유물 검색창  검색창 선택 버튼에서 박물관 유물 선택하면 창에 보이고 싶은데  .....-->
+                    <div class="input-group-searchbox" >
+                        <!-- Dropdown -->
+                        <div class="btn-group dropdown">
+                          <!--dropdown-menu my-1-->
+                          <select class="btn btn-primary" >
+                            <option class="dropdown-item" value="박물관">박물관</option>
+                            <option class="dropdown-item" value="유물">유물</option>
+                          </select>
+                        </div>
+                       
+                        <input type="text" class="form-control" placeholder="박물관과 유물을 입력하세요">
+                        &nbsp;&nbsp;&nbsp;
+                        <button type="submit" class="btn btn-primary" >검색</button>
+                      </div>
+<!------------------------>
+
+                      <!--한눈에 보는 유물-->
+    
+
+<div class="swiper mySwiper" style="margin-left: 20%;">
+  <div class="mainanti">
+  <span class="antiswiper" >한눈에 보는 유물</span>
+  <span class="antimore"><a href="antiquitySearch.html">+더보기</a></span>
+ </div><br><br>
+  <div class="swiper-wrapper">
+    <!--유물1-->
+    <div class="swiper-slide" >
+      <a href="#" class="gallery-item d-block card-hover zoom-effect">
+        <div class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden zindex-2 opacity-0">
+         
+          <div class="position-absolute top-10 start-0 w-100 text-center text-white fs-sm fw-medium zindex-2 pb-3">
+            <p>유물소개</p>
+            <span class="goanti">자세히보기</span>
+          </div>
+          <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+        </div>
+        <div class="zoom-effect-wrapper rounded-4">
+          <img src="../img/exhibition01.JPG" class="zoom-effect-img" alt="Image caption" >
+        </div>
+      </a>
+    </div>
+
+    <!--유물2-->
+    <div class="swiper-slide"> 
+      <a href="#" class="gallery-item d-block card-hover zoom-effect">
+        <div class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden zindex-2 opacity-0">
+         
+          <div class="position-absolute top-10 start-0 w-100 text-center text-white fs-sm fw-medium zindex-2 pb-3">
+            <p>유물소개</p>
+            <span class="goanti">자세히보기</span>
+          </div>
+          <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+        </div>
+        <div class="zoom-effect-wrapper rounded-4">
+          <img src="../img/empty_heart_icon.png" class="zoom-effect-img" alt="Image caption">
+        </div>
+      </a>
+    </div>
+
+<!--유물3-->
+    <div class="swiper-slide"><div class="gallery">
+      <a href="#" class="gallery-item d-block card-hover zoom-effect">
+        <div class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden zindex-2 opacity-0">
+         
+          <div class="position-absolute top-10 start-0 w-100 text-center text-white fs-sm fw-medium zindex-2 pb-3">
+            <p>유물소개</p>
+            <span class="goanti">자세히보기</span>
+          </div>
+          <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+        </div>
+        <div class="zoom-effect-wrapper rounded-4">
+          <img src="../img/empty_heart_icon.png" class="zoom-effect-img" alt="Image caption">
+        </div>
+      </a>
+    </div></div>
+
+       <!--유물4-->
+    <div class="swiper-slide"><div class="gallery">
+      <a href="#" class="gallery-item d-block card-hover zoom-effect">
+        <div class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden zindex-2 opacity-0">
+         
+          <div class="position-absolute top-10 start-0 w-100 text-center text-white fs-sm fw-medium zindex-2 pb-3">
+            <p>유물소개</p>
+            <span class="goanti">자세히보기</span>
+          </div>
+          <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+        </div>
+        <div class="zoom-effect-wrapper rounded-4">
+          <img src="../img/empty_heart_icon.png" class="zoom-effect-img" alt="Image caption">
+        </div>
+      </a>
+    </div></div>
+
+       <!--유물5-->
+    <div class="swiper-slide"><div class="gallery">
+      <a href="#" class="gallery-item d-block card-hover zoom-effect">
+        <div class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden zindex-2 opacity-0">
+         
+          <div class="position-absolute top-10 start-0 w-100 text-center text-white fs-sm fw-medium zindex-2 pb-3">
+            <p>유물소개</p>
+            <span class="goanti">자세히보기</span>
+          </div>
+          <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+        </div>
+        <div class="zoom-effect-wrapper rounded-4">
+          <img src="../img/empty_heart_icon.png" class="zoom-effect-img" alt="Image caption">
+        </div>
+      </a>
+    </div></div>
+
+       <!--유물6-->
+    <div class="swiper-slide"><div class="gallery">
+      <a href="#" class="gallery-item d-block card-hover zoom-effect">
+        <div class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden zindex-2 opacity-0">
+         
+          <div class="position-absolute top-10 start-0 w-100 text-center text-white fs-sm fw-medium zindex-2 pb-3">
+            <p>유물소개</p>
+            <span class="goanti">자세히보기</span>
+          </div>
+          <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+        </div>
+        <div class="zoom-effect-wrapper rounded-4">
+          <img src="../img/empty_heart_icon.png" class="zoom-effect-img" alt="Image caption">
+        </div>
+      </a>
+    </div></div>
+
+       <!--유물7-->
+    <div class="swiper-slide"><div class="gallery">
+      <a href="#" class="gallery-item d-block card-hover zoom-effect">
+        <div class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden zindex-2 opacity-0">
+         
+          <div class="position-absolute top-10 start-0 w-100 text-center text-white fs-sm fw-medium zindex-2 pb-3">
+            <p>유물소개</p>
+            <span class="goanti">자세히보기</span>
+          </div>
+          <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+        </div>
+        <div class="zoom-effect-wrapper rounded-4">
+          <img src="../img/empty_heart_icon.png" class="zoom-effect-img" alt="Image caption">
+        </div>
+      </a>
+    </div></div>
+
+       <!--유물8-->
+    <div class="swiper-slide"><div class="gallery">
+      <a href="#" class="gallery-item d-block card-hover zoom-effect">
+        <div class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden zindex-2 opacity-0">
+         
+          <div class="position-absolute top-10 start-0 w-100 text-center text-white fs-sm fw-medium zindex-2 pb-3">
+            <p>유물소개</p>
+            <span class="goanti">자세히보기</span>
+          </div>
+          <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+        </div>
+        <div class="zoom-effect-wrapper rounded-4">
+          <img src="../img/empty_heart_icon.png" class="zoom-effect-img" alt="Image caption">
+        </div>
+      </a>
+    </div></div>
+
+       <!--유물9-->
+    <div class="swiper-slide">
+      <div class="gallery">
+      <a href="#" class="gallery-item d-block card-hover zoom-effect">
+        <div class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 rounded-4 overflow-hidden zindex-2 opacity-0">
+         
+          <div class="position-absolute top-10 start-0 w-100 text-center text-white fs-sm fw-medium zindex-2 pb-3">
+            <p>유물소개</p>
+            <span class="goanti">자세히보기</span>
+          </div>
+          <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+        </div>
+        <div class="zoom-effect-wrapper rounded-4">
+          <img src="../img/empty_heart_icon.png" class="zoom-effect-img" alt="Image caption">
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<dev class="antiquebtn">
+<button type="button" class="btn btn-prev btn-icon btn-sm btn-outline-primary rounded-circle me-2">
+  <i class="ai-arrow-left"></i>
+</button>
+<button type="button" class="btn btn-next btn-icon btn-sm btn-outline-primary rounded-circle ms-2">
+  <i class="ai-arrow-right"></i>
+</button>
+</dev> -->
+
+<!-- Swiper JS -->
+
+<script src="../css/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    freeMode: true,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: ".ai-arrow-left",
+      prevEl: ".ai-arrow-right",
+    },
+  });
+</script> 
+<!------------------------------------------------------------------->
+
+               
+<!--오늘의 박물관 시작-->
+
+<br><br><br>
+<h1 style="text-align: center;">오늘의 박물관</h1>
+<div class="swiper museumSwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><a href="#"><img src="../img/museum1.jpg" class="museumImg"><p class="todayMuseum" id="museName">국립중앙박물관</p></a></div>
+    <div class="swiper-slide"><a href="#"><img src="../img/museum2.jpg" class="museumImg"><p class="todayMuseum" id="museName">국립광주박물관</p></a></div>
+    <div class="swiper-slide"><a href="#"><img src="../img/museum3.jpg" class="museumImg"><p class="todayMuseum" id="museName">국립나주박물관</p></a></div>
+    <div class="swiper-slide"><a href="#"><img src="../img/museum3.jpg" class="museumImg"><p class="todayMuseum" id="museName">국립나주박물관</p></a></div>
+    <div class="swiper-slide"><a href="#"><img src="../img/museum3.jpg" class="museumImg"><p class="todayMuseum" id="museName">국립나주박물관</p></a></div>
+    <div class="swiper-slide"><a href="#"><img src="../img/museum3.jpg" class="museumImg"><p class="todayMuseum" id="museName">국립나주박물관</p></a></div>
+    <div class="swiper-slide"><a href="#"><img src="../img/museum3.jpg" class="museumImg"><p class="todayMuseum" id="museName">국립나주박물관</p></a></div>
+    <div class="swiper-slide"><a href="#"><img src="../img/museum3.jpg" class="museumImg"><p class="todayMuseum" id="museName">국립나주박물관</p></a></div>
+    <div class="swiper-slide"><a href="#"><img src="../img/museum3.jpg" class="museumImg"><p class="todayMuseum" id="museName">국립나주박물관</p></a></div>
+  </div>
+
+  <!--박물관 옆으로 버튼-->
+<div class="museumbtn">
+  <div class="button-next">
+    <button type="button" class="btn btn-prev btn-icon btn-lg btn-outline-primary rounded-circle me-2">
+    <i class="ai-chevron-left"></i>
+  </button></div>
+
+  <div class="button-prev">
+    <button type="button" class="btn btn-next btn-icon btn-lg btn-outline-primary rounded-circle ms-2">
+      <i class="ai-chevron-right"></i>
+    </button>
+  </div>
+</div>
+
+</div>
+<script src="../css/swiper-bundle.min.js"></script>
+<!-- 박물관 옆으로 이동 -->
+<script>
+  var swiper = new Swiper(".museumSwiper", {
+    slidesPerView: 3,
+    spaceBetween: 15,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+
+    navigation: {
+      nextEl: ".button-next",
+      prevEl: ".button-prev",
+    },
+  });
+</script>
+
+<!--오늘의 박물관 끝-->
+
+
+<div class="sabuzakNotice">
+
+<!--공지사항과 사부작소개-->
+<div class="sabuzak ">
+<!--사부작-->
+<table>
+  <tr>
+    <td colspan="2">사부작</td>
+    </tr>
+    <tr>
+    <td rowspan="2"><img src="../img/sabuzak_main.JPG"  class="sabuzakMain"></td>
+
+    <td class="sabuzakT"><p>역사와 문화가 살아 숨쉬는<br>
+    사부작 박물관을 소개합니다.</p></td>
+    </tr>
+      <tr>
+       
+        <td class="sabuzakM">
+          <span>사부작 박물관은 역사적 사료의 물리적, 심리적 거리를<br> 줄이고
+  집에서도 유물을 쉽고 재밌게 볼 수 있는<br> 온라인 박물관입니다.
+</span>
+        </td>
+      </tr>
+ 
+      <tr>
+        <td colspan="2" class="sabuzakB">
+          <a href="intro.html">+더보기</a>
+        </td>
+      </tr>
+  </table>
+</div>
+
+<!--공지사항-->
+<div class="notice">
+
+  <div class="row">
+    공지사항
+  </div>
+
+  <div class="row">
+    <div class="col-1">
+      1
+    </div>
+    <div class="col-8"><a href="#">공지사항~~~~</a></div>
+    <div class="col-2">2022.10.30</div>
+  </div>
+  <div class="row">
+    <div class="col-1">
+      1
+    </div>
+    <div class="col-8"><a href="#">공지사항~~~~</a></div>
+    <div class="col-2">2022.10.30</div>
+  </div>  <div class="row">
+    <div class="col-1">
+      1
+    </div>
+    <div class="col-8"><a href="#">공지사항~~~~</a></div>
+    <div class="col-2">2022.10.30</div>
+  </div>  <div class="row">
+    <div class="col-1">
+      1
+    </div>
+    <div class="col-8"><a href="#">공지사항~~~~</a></div>
+    <div class="col-2">2022.10.30</div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <a href="notice.html">+더보기</a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!----특별전시-->
+<div class="specialtext">
+  <span class="specialT">특별전시</span>
+  <span class="goexhi"><a href="exhibition.html">+더보기</a></span>
+</div>
+<br><br>
+<div class="special">
+
+    <!-- 특별전시 카드들 -->
+    <div class="swiper exhibition">
+      
+      <!-- <button type="button" class="btn btn-prev btn-icon btn-sm btn-outline-primary mt-0">
+        <i class="ai-arrow-left"></i>
+      </button> -->
+
+      <div class="swiper-wrapper exhibition">
+        <div class="swiper-slide"><a href="#"><img src="../img/exhibition01.JPG" class="slideExhibition"></a></div>
+        <div class="swiper-slide"><a href="#"><img src="../img/exhibition02.JPG" class="slideExhibition"></a></div>
+        <div class="swiper-slide"><a href="#"><img src="../img/exhibition03.JPG" class="slideExhibition"></a></div>
+        <div class="swiper-slide"><a href="#"><img src="../img/exhibition04.JPG" class="slideExhibition"></a></div>
+        <div class="swiper-slide"><a href="#"><img src="../img/exhibition05.JPG" class="slideExhibition"></a></div>
+        <div class="swiper-slide"><a href="#"><img src="../img/exhibition06.JPG" class="slideExhibition"></a></div>
+        <div class="swiper-slide"><a href="#"><img src="../img/exhibition07.JPG" class="slideExhibition"></a></div>
+        <div class="swiper-slide"><a href="#"><img src="../img/exhibition08.JPG" class="slideExhibition"></a></div>
+        <div class="swiper-slide"><a href="#"><img src="../img/exhibition09.JPG" class="slideExhibition"></a></div>
+      </div>
+   
+      <!-- <button type="button" class="btn btn-next btn-icon btn-sm btn-outline-primary  ms-1">
+        <i class="ai-arrow-right"></i>
+      </button>
+  -->
+     
+    </div>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".exhibition", {
+        slidesPerView: 7,
+        spaceBetween: 3,
+        slidesPerGroup: 1,
+         loop: true,
+        centeredSlides: true,
+        autoplay: {
+          delay: 1500,
+          disableOnInteraction: false,
+        },
+        
+        navigation: {
+          nextEl: ".ai-arrow-left",
+          prevEl: ".ai-arrow-right",
+        },
+      });
+    </script>
+
+</div>
+
+</div>
+
+</section>
+
+  <!-- Footer-->
+  <footer class="footer py-5">
+    <div class="container pt-md-2 pt-lg-3 pt-xl-4">
+      <div class="row pb-5 pt-sm-2 mb-lg-2">
+        <div class="col-md-12 col-lg-3 pb-2 pb-lg-0 mb-4 mb-lg-0"><a class="navbar-brand py-0 mb-3 mb-lg-4"
+            href="index.html"><span class="text-primary flex-shrink-0 me-2">
+              <img version="1.1" width="80" height="60" viewBox="0 0 36 33" src="../img/sabuzak_logo_black.png" />
+              <path fill="currentColor"
+                d="M35.6,29c-1.1,3.4-5.4,4.4-7.9,1.9c-2.3-2.2-6.1-3.7-9.4-3.7c-3.1,0-7.5,1.8-10,4.1c-2.2,2-5.8,1.5-7.3-1.1c-1-1.8-1.2-4.1,0-6.2l0.6-1.1l0,0c0.6-0.7,4.4-5.2,12.5-5.7c0.5,1.8,2,3.1,3.9,3.1c2.2,0,4.1-1.9,4.1-4.2s-1.8-4.2-4.1-4.2c-2,0-3.6,1.4-4,3.3H7.7c-0.8,0-1.3-0.9-0.9-1.6l5.6-9.8c2.5-4.5,8.8-4.5,11.3,0L35.1,24C36,25.7,36.1,27.5,35.6,29z">
+              </path>
+              </svg>
+            </span><span class="text-nav">사부작</span></a>
+          <p id="asdmflasdkmfdlas" class="fs-xs pb-2 pb-lg-3 mb-3">사부작은 유물과 전국 박물관에 대한 정보를 제공함으로써<br/>현대인들에게 보다 쉽게 역사에
+            다가갈 수 있도록 합니다.</p>
+          <div class="d-flex"><a class="btn btn-icon btn-sm btn-secondary btn-facebook rounded-circle me-3" href="#"><i
+                class="ai-facebook"></i></a>
+            <a class="btn btn-icon btn-sm btn-secondary btn-instagram rounded-circle me-3" href="#"><i
+                class="ai-instagram"></i></a>
+            <a class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle" href="#"><i
+                class="ai-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-2 offset-xl-1 mb-4 mb-sm-0">
+          <ul class="nav flex-column">
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="intro.html">사부작 소개</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="notice.html">공지사항</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="museumSearch.html">박물관</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="antiquitySearch.html">유물</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="exhibition.html">특별전시</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="Board.html">게시판</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4 col-lg-2 mb-4 mb-sm-0">
+          <ul class="nav flex-column">
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="mailto:sabuzak@multi.com">sabuzak@multi.com</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="tel:+821234567">+82 123 4567</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="tel:+828901234">+82 890 1234</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-5 col-lg-4 col-xl-3 offset-lg-1">
+          <h3 class="h6 mb-2">사부작의 소식을 구독해보세요.</h3>
+          <p class="fs-sm">새로운 유물 소식을 놓치지 마세요!</p>
+          <div class="input-group input-group-sm">
+            <input class="form-control" type="text" id="email" placeholder="Your email">
+            <button class="btn btn-primary" type="button">구독하기</button>
+          </div>
+        </div>
+      </div>
+      <p class="fs-sm mb-0"><span class="opacity-70">&copy; 2022, Sabuzak, Korea. All rights reserved. </span><a
+          class="nav-link d-inline fw-normal p-0" href="index.html" target="_blank" rel="noopener">Sabuzak
+          </a></p>
+    </div>
+  </footer>
+  </main>
+
+  <script src="../css/swiper-bundle.min.js"></script>
+  <script src="../css/bootstrap.bundle.min.js"></script>
+  <script src="../css/theme.min.js"></script>
+
+  </body>
+</html>

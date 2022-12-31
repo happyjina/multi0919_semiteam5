@@ -1,0 +1,192 @@
+/*background image*/
+.my_div{
+  position: relative;
+
+}
+.my_bg{
+  background-image: url("../img/back.JPG");
+  background-size: cover;
+}
+/*breadcrumg*/
+#bc2{
+  margin-left: 13px;
+}
+.py-5{
+  padding-bottom: 0px !important;
+}
+#bc{
+  padding-top: 30px;
+  
+}
+#brMuName{
+  font-weight: 800;
+}
+
+
+/*메인이미지*/
+.boardMain{
+  position: relative;
+}
+
+.main_image_text {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+  color: rgb(48, 45, 45);
+}
+
+
+h3.boardDetail_text {
+  padding-top: 30px;
+  text-align: center;
+}
+h3.boardDetail_text:after {
+  content: "";
+  display: block;
+  width: 90px;
+  border-bottom: 2px solid #000000;
+  margin: 20px auto;
+}
+
+
+/*게시판 상세보기*/
+
+.bd{
+  margin-top: 40px;
+  border: solid 1px rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 30px 50px;
+ 
+}
+
+.category{
+  float: left;
+  width: 75px;
+  height: 45px;
+  border: solid 1px rgb(236, 234, 234);
+  border-radius: 10px;
+  background-color: rgb(236, 234, 234);
+  text-align: center;
+  color: black;
+  padding-top: 10px;
+  margin-right: 10px;
+  margin-top: 10px ;
+  margin-bottom: 10px ;
+
+}
+#title{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+#tt{
+  display: flex;
+  width: 1110px;
+  border: none;
+}
+.etcetc{
+  padding-bottom: 15px;
+  border-bottom: solid 1px rgb(211, 209, 209);
+}
+.etc{
+  width: 250px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  margin-left: 10px;
+ 
+}
+
+#icon{
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+/*파일*/
+
+#renamedFileName {
+  text-decoration: none;
+
+}
+/*좋아요*/
+
+.like{
+  text-align: center;
+}
+.like > .btn-secondary{
+  background-color: white;
+  border-color: #448c74;
+  color: #448c74;
+}
+
+
+/* 수정삭제목록글쓰기*/
+.crud{
+  margin-top: 50px;
+  margin-bottom: 25px;
+  float: right;
+ 
+}
+#wr{
+  font-size: 0.7rem;
+}
+
+
+/*댓글*/
+#replybtn{
+  margin-right: 3px; 
+  height: 100px; 
+  margin-top: 3px;
+}
+
+.replyWrite{
+  border-top: solid 1px rgb(221, 217, 217);
+  padding-top: 20px;
+
+}
+.replyContent{
+  border-bottom: solid 1px rgb(221, 217, 217);
+  padding-bottom: 10px;
+  float: flex;
+
+  
+}
+.replyName{
+  float: left;
+}
+.replyDate{
+  display: inline;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  padding-left: 20px;
+  
+}
+.trashbtn{
+  width: 100px;
+  margin-left: 1220px;
+  opacity: 0;
+}
+
+.reviewlist:hover .trashbtn{
+  opacity: 1;
+}
+
+.reviewlist{
+  display: none;
+}
+
+#seeMore{
+  width: 100px;
+  float: right;
+  margin-bottom: 20px;
+  margin-right: 10px;
+
+}
+.pn{
+  padding-left: 40%;
+  margin-bottom: 50px;
+}
+#pi{
+  margin-right: 80px;
+}

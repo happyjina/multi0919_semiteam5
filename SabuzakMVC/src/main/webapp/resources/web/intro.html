@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>사부작 | 소개</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Around - Multipurpose Bootstrap HTML Template">
+    <meta name="keywords" content="bootstrap, business, corporate, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, saas, multipurpose, product landing, shop, software, ui kit, web studio, landing, dark mode, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/sabuzak_logo_black.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/sabuzak_logo_black.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/sabuzak_logo_black.png">
+    <link rel="manifest" href="../img/sabuzak_logo_black.png">
+    <link rel="mask-icon" color="#6366f1" href="../img/sabuzak_logo_black.png">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" href="../img/sabuzak_logo_black.png">
+    <meta name="theme-color" content="white">
+    <!-- Theme mode-->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== undefined && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+      
+      
+    </script>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1500);
+        };
+      })();
+      
+    </script>
+    <!-- Import Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" id="google-font">
+    <!-- Vendor styles-->
+    <link rel="stylesheet" media="screen" href="../css/Around/assets/vendor/swiper/swiper-bundle.min.css"/>
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../css/theme.min.css">
+    <!-- Google fonts - Playfair Display-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700">
+    <!-- Google fonts - Poppins-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700">
+    
+    <!--Header Strylesheet-->
+
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/header_1.css">
+    <!--Footer stylesheet-->
+    <link rel="stylesheet" href="../css/footer_1.css">
+    <link rel="stylesheet" href="../css/intro.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <!-- Body-->
+  <body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+    <!-- Page wrapper-->
+    
+    <main class="page-wrapper">
+
+      <!--한지 배경색 넣어줌 style-->
+      <header class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container"><a class="navbar-brand pe-sm-3" href="index.html">
+          <img src="../img/logo_small1.png">
+          <span class="d-none d-sm-inline">사부작</span></a>
+          <div class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto" data-bs-toggle="mode">
+            <a class="btn btn-primary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex" href="login.html" target="_blank" rel="noopener" id="login" >&nbsp;로그인&nbsp; </a>      
+            <a class="btn btn-primary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex" href="enroll.html" target="_blank" rel="noopener" id="enroll">&nbsp;회원가입&nbsp;</a>
+        </div>
+          
+                    <!-- 로그인 후-->
+                    <!-- <div class="dropdown nav d-none d-sm-block order-lg-3"><a class="nav-link d-flex align-items-center p-0"
+                      href="#" data-bs-toggle="dropdown" aria-expanded="false"><img class="m-lg-1"
+                        src="../img/sabuzak_logo_black.png" width="55" alt="Isabella Bocouse">
+                      <div class="ps-2">
+                        <div class="fs-xs lh-1 opacity-60">안녕하세요.</div>
+                        <div class="fs-sm dropdown-toggle" id="name">김땡땡</div>
+                      </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end my-1">
+                      <h6 class="dropdown-header fs-xs fw-medium text-muted text-uppercase pb-1">내 계정</h6>
+                      <a class="dropdown-item" href="mypage.html"><i class="ai-user-check fs-lg opacity-70 me-2"></i>마이페이지</a>
+                      <a class="dropdown-item" href="myArticle.html"><i class="ai-messages fs-lg opacity-70 me-2"></i>내가 쓴
+                        글보기</a>
+                      <a class="dropdown-item" href="antiWishlist.html"><i class="ai-heart fs-lg opacity-70 me-2"></i>내가 찜한
+                        유물</a>
+                      <a class="dropdown-item" href="museumWishlist.html"><i class="ai-heart fs-lg opacity-70 me-2"></i>내가 찜한
+                        박물관</a>
+                      <div class="dropdown-divider"></div><a class="dropdown-item" href="index.html"><i
+                          class="ai-logout fs-lg opacity-70 me-2"></i>로그아웃</a>
+                    </div>
+                  </div> -->
+
+          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+          <nav class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
+              <li class="nav-item"><a class="nav-link" href="intro.html"  >사부작소개</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="museumSearch.html" >박물관</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="antiquitySearch.html" >유물</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="exhibition.html" >특별전시</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="Board.html" >게시판</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="notice.html" >공지사항</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="mypage.html" >마이페이지</a>
+              </li>
+              </ul>
+              </nav>
+        </div>
+      </header>
+
+<section class="sectionbody" >
+<!--사부작 설명-->
+<div class="intro"   style="background-image: url(../img/back1.JPG);">
+<div class="intro-up">
+<section class="intro-tit">
+  <div class="jarallax min-vh-40 py-4" data-jarallax data-type="scroll-opacity" data-speed="0.7">
+  <div class="title-intro"><img src="../img/sabuzak_logo_black.png" width="70px" height="50px"/><h3>사부작</h3> </div>
+  <p><b>어디서든 편하게 역사와 문화를 한 눈에 즐길 수 있는 사부작에 오신 것을 환영합니다.</b></p>
+</section>
+  <ul class="subtitle1">
+    <li class="subtitle1-1">
+  <div class="title-subtitle"><h5>유물 관람의 편의성을 제공하는 사부작</h5>
+    <div class="subtitle-text">
+    <div class="small">'사부작거리다': 별로 힘들이지 않고 가볍게 행동하다.</div>
+    <p>저희 사부작은 '사부작거리다'의 사전적<br/>의미에 맞게 보는 이들께 편한<br/>유물 관람을 도와드립니다.</p>
+  </div>
+</div>
+</li>
+<li class="subtitle1-2">
+  <div class="title-subtitle"><h5>언제 어디서든 유물 관람 사이트 사부작</h5>
+    <div class="subtitle-text">
+    <p>사부작은 박물관 방문과 유물 관람에 대한<br/>진입 장벽을 낮추기 위해 노력하고 있습니다.<br/>언제든 시간과 공간에 구애받지 않고<br/>즐길 수 있는 내 컴퓨터 속 박물관입니다.</p>
+  </div>
+</div>
+</li>
+</ul>
+<section class="subtitle2" >
+  <p><b>앞으로 달려나가는 치열한 삶 속에서 과거를 되돌아보며 휴식을 취해보세요.<br/>
+  저희 사부작과 함께 유물과 전시를 보며 역사의 발자취에 따라 사부작 걸어보아요.</b></p>
+  </section>
+</div>
+<!--페이지 설명-->
+<br/>
+<br/>
+<br/>
+<br/>
+  <section class="card"  >
+    <div class="container">
+      <div class="row">
+        <!-- 박물관 -->
+        <div class="card-body-total card-body1 hvr-grow hover-animate" data-marker-id="59c0c8e33b1527bfe2abaf92">
+          <div class="card h-100 border-0 shadow">
+            <div class="card-body d-flex align-items-center">
+              <div class="w-100">
+                <h5 class="card-title"><a  href="museumSearch.html">박물관 정보를 한 눈에</a></h5>
+              </div>
+            </div>
+            <div class="card-img-top overflow-hidden"> <img class="img-fluid" src="../img/back.JPG" alt="박물관 정보를 한 눈에"/><a class="tile-link" href="museumSearch.html"></a>
+              <div class="card-img-overlay-bottom z-index-20"></div>
+              <div class="card-img-overlay-top text-end"><a class="position-relative z-index-40" > 
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+        <!-- 유물-->
+        <div class="card-body-total card-body2 hvr-grow hover-animate" data-marker-id="59c0c8e33b1527bfe2abaf92">
+          <div class="card h-100 border-0 shadow">
+            <div class="card-body d-flex align-items-center">
+              <div class="w-100">
+                <h5 class="card-title"><a href="antiquitySearch.html">유물 정보를 한 눈에</a></h5>
+              </div>
+            </div>
+            <div class="card-img-top overflow-hidden"> <img class="img-fluid" src="../img/back.JPG" alt="유물 정보를 한 눈에"/><a class="tile-link" href="antiquitySearch.html"></a>
+              <div class="card-img-overlay-bottom z-index-20"></div>
+              <div class="card-img-overlay-top text-end"><a class="position-relative z-index-40"> 
+                  </a></div>
+            </div>
+          </div>
+        </div>
+        <!-- 특별전시 -->
+        <div class="card-body-total card-body1 hvr-grow hover-animate" data-marker-id="59c0c8e33b1527bfe2abaf92">
+          <div class="card h-100 border-0 shadow">
+            <div class="card-body d-flex align-items-center">
+              <div class="w-100">
+                <h5 class="card-title"><a  href="exhibition.html">특별전시를 한 눈에</a></h5>
+              </div>
+            </div>
+            <div class="card-img-top overflow-hidden"> <img class="img-fluid" src="../img/back.JPG" alt="특별전시를 한 눈에"/><a class="tile-link" href="exhibition.html"></a>
+              <div class="card-img-overlay-bottom z-index-20"></div>
+              <div class="card-img-overlay-top text-end"><a class="position-relative z-index-40"> 
+                  <svg class="svg-icon text-white">
+                    <use xlink:href="#heart-1"> </use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+        <!-- 온라인전시-->
+        <div class="card-body-total card-body2 hvr-grow hover-animate" data-marker-id="59c0c8e33b1527bfe2abaf92">
+          <div class="card h-100 border-0 shadow">
+            <div class="card-body d-flex align-items-center">
+              <div class="w-100">
+                <h5 class="card-title"><a href=".html">온라인 전시를 한 눈에</a></h5>
+              </div>
+            </div>
+            <div class="card-img-top overflow-hidden"> <img class="img-fluid" src="../img/back1.JPG" alt="온라인 전시를 한 눈에"/><a class="tile-link" href=".html"></a>
+              <div class="card-img-overlay-bottom z-index-20"></div>
+              <div class="card-img-overlay-top text-end"><a class="position-relative z-index-40"> 
+                  <svg class="svg-icon text-white">
+                    <use xlink:href="#heart-1"> </use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+</div>
+
+<!--숫자로 보는 사부작 박물관-->
+<section class="bottom-num"   style="background-image: url(../img/back1.JPG);">
+<div class="statistic" >
+  <h4>숫자로 보는 사부작 박물관</h4>
+  <div class="small down">2022년 12월 12일 기준</div>
+  <div class="number">
+  <div class="numofM"><img src="../img/mu.jpg" />
+    <h5>540+</h5>
+    <h6>전국 박물관 수</h6>
+  </div>
+  <div class="numofOA"><img src="../img/pngwing.com.png"/>
+    <h5>10,341</h5>
+    <h6>공개 유물</h6>
+  </div>
+  <div class="numofMe"><img src="../img/man.jpg" />
+    <h5>500,000+</h5>
+    <h6>누적 가입자 수</h6>
+  </div>
+  <div class="numofV"><img src="../img/visit.jpg"/>
+    <h5>895,423</h5>
+    <h6>일일 방문자</h6>
+  </div>
+</div>
+</div>
+</section>
+
+</section>
+   
+   <!-- Footer-->
+   <footer class="footer py-5">
+    <div class="container pt-md-2 pt-lg-3 pt-xl-4">
+      <div class="row pb-5 pt-sm-2 mb-lg-2">
+        <div class="col-md-12 col-lg-3 pb-2 pb-lg-0 mb-4 mb-lg-0"><a class="navbar-brand py-0 mb-3 mb-lg-4"
+            href="index.html"><span class="text-primary flex-shrink-0 me-2">
+              <img version="1.1" width="80" height="60" viewBox="0 0 36 33" src="../img/sabuzak_logo_black.png" />
+              <path fill="currentColor"
+                d="M35.6,29c-1.1,3.4-5.4,4.4-7.9,1.9c-2.3-2.2-6.1-3.7-9.4-3.7c-3.1,0-7.5,1.8-10,4.1c-2.2,2-5.8,1.5-7.3-1.1c-1-1.8-1.2-4.1,0-6.2l0.6-1.1l0,0c0.6-0.7,4.4-5.2,12.5-5.7c0.5,1.8,2,3.1,3.9,3.1c2.2,0,4.1-1.9,4.1-4.2s-1.8-4.2-4.1-4.2c-2,0-3.6,1.4-4,3.3H7.7c-0.8,0-1.3-0.9-0.9-1.6l5.6-9.8c2.5-4.5,8.8-4.5,11.3,0L35.1,24C36,25.7,36.1,27.5,35.6,29z">
+              </path>
+              </svg>
+            </span><span class="text-nav">사부작</span></a>
+          <p id="asdmflasdkmfdlas" class="fs-xs pb-2 pb-lg-3 mb-3">사부작은 유물과 전국 박물관에 대한 정보를 제공함으로써<br />현대인들에게 보다 쉽게 역사에
+            다가갈 수 있도록 합니다.</p>
+          <div class="d-flex"><a class="btn btn-icon btn-sm btn-secondary btn-facebook rounded-circle me-3" href="#"><i
+                class="ai-facebook"></i></a>
+            <a class="btn btn-icon btn-sm btn-secondary btn-instagram rounded-circle me-3" href="#"><i
+                class="ai-instagram"></i></a>
+            <a class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle" href="#"><i
+                class="ai-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-2 offset-xl-1 mb-4 mb-sm-0">
+          <ul class="nav flex-column">
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="intro.html">사부작 소개</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="notice.html">공지사항</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="museumSearch.html">박물관</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="antiquitySearch.html">유물</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="exhibition.html">특별전시</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="Board.html">게시판</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4 col-lg-2 mb-4 mb-sm-0">
+          <ul class="nav flex-column">
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="mailto:sabuzak@multi.com">sabuzak@multi.com</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="tel:+821234567">+82 123 4567</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="tel:+828901234">+82 890 1234</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-5 col-lg-4 col-xl-3 offset-lg-1">
+          <h3 class="h6 mb-2">사부작의 소식을 구독해보세요.</h3>
+          <p class="fs-sm">새로운 유물 소식을 놓치지 마세요!</p>
+          <div class="input-group input-group-sm">
+            <input class="form-control" type="text" placeholder="Your email">
+            <button class="btn btn-primary" type="button">구독하기</button>
+          </div>
+        </div>
+      </div>
+      <p class="fs-sm mb-0"><span class="opacity-70">&copy; 2022, Sabuzak, Korea. All rights reserved. </span><a
+          class="nav-link d-inline fw-normal p-0" href="index.html" target="_blank" rel="noopener">Sabuzak
+          </a></p>
+    </div>
+  </footer>  
+  </main>
+  </body>
+</html>

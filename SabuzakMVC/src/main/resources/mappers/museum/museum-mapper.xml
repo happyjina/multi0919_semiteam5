@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper
+	namespace="com.multi.mvc.museum.model.mapper.MuseumMapper">
+
+	<resultMap type="Museum" id="museumListResultMap">
+		<id property=	 "museNo" 	column="museNo" />
+		<result property="museName" column="museName" />
+		<result property="museType" column="museType" />
+		<result property="museRdnmadr" column="museRdnmadr" />
+		<result property="museLnmadr" column="museLnmadr" />
+		<result property="museLatitude" column="museLatitude" />
+		<result property="museLongitude" column="museLongitude" />
+		<result property="musePhone" column="musePhone" />
+		<result property="museInsName" column="museInsName" />
+		<result property="museUrl" column="museUrl" />
+		<result property="fcltyInfo" column="fcltyInfo" />
+		<result property="museWeekOpen" column="museWeekOpen" />
+		<result property="museWeekClose" column="museWeekClose" />
+		<result property="museHolidayOpen" column="museHolidayOpen" />
+		<result property="museHolidayClose" column="museHolidayClose" />
+		<result property="rstdeInfo" column="rstdeInfo" />
+		<result property="museCharge" column="museCharge" />
+		<result property="museIntro" column="museIntro" />
+		<result property="museTransport" column="museTransport" />
+	</resultMap>
+	
+	
+	<resultMap type="MuseReply" id="museumReplyResultMap">
+		<id property="mReplyNo" column="mReplyNo" />
+		<result property="museNo" column="museNo" />
+		<result property="memberNo" column="memberNo" />
+		<result property="content" column="content" />
+		<result property="good" column="good" />
+		<result property="bad" column="bad" />
+		<result property="status" column="status" />
+		<result property="createDate" column="createDate" />
+		<result property="modifyDate" column="modifyDate" />
+		<result property="star" column="star" />
+	</resultMap>
+	
+	
+	
+	
+	<resultMap type="Museum" id="museumDetailResultMap" extends="museumListResultMap">
+		<collection property="replies" javaType="arrayList" columnPrefix="R_" 
+												resultMap="museumReplyResultMap"/>
+	</resultMap>
+	
+
+
+	<select id="selectMuseumCount" resultType="int" parameterType="map">
+		SELECT COUNT(*)
+		FROM MUSEUM mu
+		LEFT OUTER JOIN bookmark_muse b ON
+		(b.museNO = mu.museNO)
+		WHERE 1 = 1
+		<if test="museName != null">
+			AND mu.museName LIKE '%${museName}%'
+		</if>
+		<if test="city != null and county != null">
+			AND mu.museRdnmadr LIKE '%${city}%' 
+			AND mu.museRdnmadr LIKE '%${county}%' 
+		</if>
+	</select>
+
+	<select id="selectMuseumList" resultMap="museumListResultMap" 	parameterType="map">
+		SELECT
+		mu.museNo, mu.museName, mu.museType, mu.museRdnmadr,
+		mu.museLnmadr,
+		mu.museLatitude, mu.museLongitude, mu.musePhone,
+		mu.museInsName, mu.museUrl, mu.fcltyInfo, mu.museWeekOpen,
+		mu.museWeekClose,
+		mu.museHolidayOpen, mu.museHolidayClose,
+		mu.rstdeInfo,
+		mu.museCharge, mu.museIntro, mu.museTransport,
+		b.bookmarkMuseNo
+		FROM MUSEUM mu
+		LEFT OUTER JOIN bookmark_muse b ON
+		(b.museNO = mu.museNO)
+		WHERE 1 = 1
+		<if test="museName != null">
+			AND mu.museName LIKE '%${museName}%'
+		</if>
+		<if test="city != null and county != null">
+			AND mu.museRdnmadr LIKE '%${city}%' 
+			AND mu.museRdnmadr LIKE '%${county}%' 
+		</if>
+		ORDER BY mu.museNo DESC LIMIT ${limit} OFFSET ${offset}
+	</select>
+	
+	
+	<select id="selectMuseumByNo" parameterType="int" resultMap="museumListResultMap">
+		SELECT
+		mu.museNo, mu.museName, mu.museType, mu.museRdnmadr, mu.museLnmadr,
+		mu.museLatitude, mu.museLongitude, mu.musePhone,
+		mu.museInsName, mu.museUrl, mu.fcltyInfo, mu.museWeekOpen, mu.museWeekClose,
+		mu.museHolidayOpen, mu.museHolidayClose, mu.rstdeInfo,
+		mu.museCharge, mu.museIntro, mu.museTransport,
+		r.mReplyNo as R_mReplyNo,
+		r.memberNo  as R_memberNo, 
+		r.content  as R_content,
+		r.good  as R_good,
+		r.bad  as R_bad,
+		r.STATUS  as R_STATUS,
+		r.createDate  as R_createDate,
+		r.modifyDate  as R_modifyDate,
+		r.star as R_star
+		FROM MUSEUM mu
+		LEFT OUTER JOIN M_REPLY r ON (r.museNo = mu.museNo)
+		LEFT OUTER JOIN MEMBER me ON (me.memberNo = r.memberNo)
+		WHERE mu.museNo = #{museNo}
+	</select>
+
+</mapper>

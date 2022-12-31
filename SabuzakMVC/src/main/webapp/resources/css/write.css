@@ -1,0 +1,179 @@
+.boardMain{
+  position: relative;
+}
+
+.main_image_text {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+  color: rgb(53, 51, 51);
+}
+
+.section {
+  width: 100%;
+  position: relative;
+  /* border: 5px solid black; */
+  height: 1350px;
+
+}
+
+/*breadcrumg*/
+#bc2{
+  margin-left: 13px; 
+}
+.py-5{
+  padding-bottom: 0px !important;
+}
+#bc{
+  padding-top: 30px;
+  
+}
+#bWrite{
+  font-weight: 800;
+}
+
+
+.outer {
+  margin-left: 20%;
+  height: 1500px;
+  width: 60%;
+}
+
+.outer h2{
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+.outer h2:after{
+  content: "";
+  display: block;
+  width: 50px;
+  border-bottom: 2px solid #000000;
+  margin: 10px auto;
+  margin-left: 545px;
+}
+
+.outer h5{
+  margin-left: 80px;
+  color: gray;
+}
+
+.outer p{
+  margin-left: 80px;
+}
+
+.inner{
+  width: 85%;
+  height: 1000px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid gray;
+  margin-left: 7%;
+}
+
+.title_container{
+  width: 100%;
+  height: 50px;
+  margin-left: 5%;
+  margin-top: 5.1%;
+  margin-bottom: 2%;
+}
+
+#titleLabel{
+  float: left;
+  margin-top: 0.8%;
+  /* background-color: aqua; */
+}
+
+#title{
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 0.5%;
+  border: 1px solid gray;
+}
+
+.writer_container{
+  width: 85%;
+  height: 50px;
+  margin-left: 7%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#writerLabel{
+  float: left;
+  margin-top: 0.8%;
+}
+
+#writer{
+  width: 50%;
+  margin-left: 15%;
+  margin-top: 0.5%;
+  border: 1px solid grey;
+}
+
+.category_container{
+  float: left;
+  height: 60px;
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+#category{
+  width: 110px;
+  margin-left: 15%;
+  margin-top: 0.5%;
+  border: 1px solid gray;
+}
+
+.attachFile_container{
+
+  height: 60px;
+
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#attachFileLabel{
+  float: left;
+  margin-left: -17%;
+  margin-top: 0.8%;
+}
+
+#originalFileName{
+  width: 70%;
+  margin-left: 20%;
+  margin-top: 0.5%;
+  border: 1px solid gray;
+  margin-bottom: 2%;
+}
+
+.textarea_container{
+  width: 85%;
+  height: 605px;
+  margin-left: 7%;
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+
+#content{
+  background-color: white;
+  width: 100%;
+  height: 600px;
+  padding: 3%;
+}
+
+.button_container{
+  width: 85%;
+  height: 70px;
+  margin-left: 7%;
+  margin-top: 2%;
+}
+
+#enrollButton{
+  margin-left: 40%;
+  margin-right: 2%;
+}
+

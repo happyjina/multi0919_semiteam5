@@ -1,0 +1,54 @@
+/*background image*/
+.my_div{
+  position: relative;
+
+}
+.my_bg{
+  background-image: url("../img/back.JPG");
+  background-size: cover;
+}
+/*breadcrumg*/
+#bc2{
+  margin-left: 13px;
+}
+.py-5{
+  padding-bottom: 0px !important;
+}
+#bc{ 
+  padding-top: 30px;
+  
+}
+#brMuName{
+  font-weight: 800;
+}
+
+
+.pagination{
+  margin-left: 290px;
+}
+
+#trash{
+  margin-right: 20px;
+}
+
+#favoriteMuseum{
+  width: 250px ;
+  height: 180px ;
+}
+
+#favbtn{
+  margin-left: 20px;
+}
+#favbtn2{
+  margin-right: 20px;
+}
+
+#mutext{
+  justify-content:center;
+}
+
+
+.page{
+  margin-top: 30px;
+  margin-bottom: 15px;
+}

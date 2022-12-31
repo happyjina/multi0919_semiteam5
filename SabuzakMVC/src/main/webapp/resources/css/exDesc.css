@@ -1,0 +1,183 @@
+.body{
+    background-image: url(../img/back1.JPG);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10%;
+}
+/* 제일 위에 홈>특별전시>현재전시 부분 */
+/*breadcrumg*/ 
+.home-mu{
+    padding-top: 30px;
+    margin-left: 170px;
+    position: relative;
+}
+#bc2{
+  margin-left: 13px;
+}
+.py-5{
+  padding-bottom: 0px !important;
+}
+#bc{
+  margin-top: 90px;
+  padding-top: 30px;
+  
+}
+#exName{
+  font-weight: 800;
+}
+
+
+  .righticon1{
+    position: absolute;
+    left: 45px;
+    font-size: 20px;
+    color: darkgray;
+  }
+  .icontext1{
+    position: absolute;
+    left: 20px;
+    font-size: 15px;
+    text-align: center;
+    bottom: 1px;
+    width: 70px;
+    color: rgb(107, 107, 107);
+  }
+  .righticon2{
+    position: absolute;
+    left: 140px;
+    font-size: 20px;
+    color: darkgray;
+}
+.icontext2{
+    color: rgb(107, 107, 107);
+    position: absolute;
+    left: 22px;
+    font-size: 15px;
+    width: 90px;
+    bottom: 1px;
+}
+.righticon3{
+    position: absolute;
+    left: 230px;
+    font-size: 20px;
+    color: darkgray;
+  }
+  .icontext3{
+    color: #448c74;
+    position: absolute;
+    left: 20px;
+    font-size: 15px;
+    width: 90px;
+    bottom: 1px;
+  }
+
+  /* 상세페이지 상단 */
+.exDesc-up{
+  margin-top: 3%;
+  height: 25%;
+  margin-bottom: 5%;
+}
+
+/* 상단 왼쪽 전시 제목, 이미지 */
+.exDesc-up-left{
+  position: relative;
+  left: 10%;
+  margin-top: 2%;
+}
+.exDesc-up-text{
+  position: absolute;
+  margin-top: 2%;
+  text-align: center;
+}
+.exDesc-image{
+  position: absolute;
+  margin-top: 5%;
+}
+
+/* 상단 오른쪽 전시 정보 */
+.exDesc-up-right{
+  position: absolute;
+  right: 25%;
+  margin-top: 4%;
+  width: 500px;
+}
+.exDesc-up-table{
+  margin: 10px;
+  width: 700px;
+}
+.exDesc-up-table-tr{
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgb(126, 125, 125);
+  height: 60px;
+}
+.exDesc-up-table-tr1{
+  height: 60px;
+  padding-top: 100px;
+  font-size: 1.2rem;
+}
+.exDesc-up-table-td{
+  text-align: center;
+}
+/* 상세페이지 하단 */
+.exDesc-down{
+  /* margin: 10px 280xp; */
+  width: 80%;
+  margin-left: 10%;
+  
+}
+.exDesc-down-text-first{
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+  color: #448c74;
+}
+.exDesc-down-text-second{
+  border-bottom: 2px solid black;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.exDesc-down-explain-text{
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+}
+
+/*현재 진행중인 전시 */
+.nowTitle{
+  width: 80%;
+  display: inline-block;
+  margin-left: 10%;
+}
+.nowT{
+  float: left;
+  color: #000;
+  font-size: xx-large;
+  font-weight: 900;
+  margin-left: 3%;
+}
+.nowM{
+  float: right;
+
+}
+.nowPosterContainer{
+display: flex;
+margin-left: 10%;
+margin-bottom: 60px;
+}
+.nowPoster img{
+  height: 400px;
+  width: 350px;
+  margin-left: 30px;
+ 
+}
+.nowPoster p, h5{
+  margin-left: 8%;
+  margin-top: 0;
+  margin-bottom:0 ;
+  padding: 5px 0;
+}
+a{
+  color: black;
+  text-decoration: none;
+  text-decoration-line: none;
+}

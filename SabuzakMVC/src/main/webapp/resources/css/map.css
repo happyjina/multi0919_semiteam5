@@ -1,0 +1,247 @@
+/*지도*/
+
+html, body {width:100%;height:100%;margin:0;padding:0;} 
+.radius_border{border:1px solid #919191;border-radius:5px;}     
+.custom_typecontrol {position:absolute;top:10px;right:10px;overflow:hidden;width:130px;height:30px;margin:0;padding:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
+.custom_typecontrol span {display:block;width:65px;height:30px;float:left;text-align:center;line-height:30px;cursor:pointer;}
+.custom_typecontrol .btn {background:#fff;background:linear-gradient(#fff,  #e6e6e6);}       
+.custom_typecontrol .btn:hover {background:#f5f5f5;background:linear-gradient(#f5f5f5,#e3e3e3);}
+.custom_typecontrol .btn:active {background:#e6e6e6;background:linear-gradient(#e6e6e6, #fff);}    
+.custom_typecontrol .selected_btn {color:#fff;background:#425470;background:linear-gradient(#425470, #5b6d8a);}
+.custom_typecontrol .selected_btn:hover {color:#fff;}   
+.custom_zoomcontrol {position:absolute;top:50px;right:10px;width:36px;height:80px;overflow:hidden;z-index:1;background-color:#f5f5f5;} 
+.custom_zoomcontrol span {display:block;width:36px;height:40px;text-align:center;cursor:pointer;}               
+.custom_zoomcontrol span:first-child{border-bottom:1px solid #bfbfbf;}          
+
+
+
+.side-menu {
+  width: 40px;
+  z-index: 10;
+  background: #448c74;
+  border-right: 1px solid rgba(0, 0, 0, 0.07);
+  height: 100%;
+  margin-bottom: -70px;
+  margin-top: 0px;
+  position: fixed;
+}
+
+.sidebar-inner {
+  height: 100%;
+  padding-top: 30px;
+}
+
+#sidebar-menu,
+#sidebar-menu ul,
+#sidebar-menu li,
+#sidebar-menu a {
+  border: 0;
+  font-weight: normal;
+  line-height: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-decoration: none;
+}
+
+#sidebar-menu>ul>li a {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  display: block;
+  padding: 14px 0px;
+  margin: 0px 0px 0px 8px;
+  width: 28px;
+  cursor: pointer;
+}
+
+#sidebar-menu .fas {
+  padding-left: 6px;
+}
+
+/* 사이드 메뉴 */
+
+.left_sub_menu {
+  position: fixed;
+  width: 400px;
+  z-index: 10;
+  left: 40px;
+  background: rgba(255, 255, 255, 0.479);
+  height: 100%;
+  margin-bottom: -70px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+}
+
+.map_search{
+  margin: 0 auto;
+  margin-left: 27px;
+  margin-top: 10px;
+  padding: 0px 0 4px 14px;
+  border-radius: 30px;
+  width: 350px;
+  height: 140px;
+  border: solid 2px #448c74;
+  background-color: #fff;
+}
+
+#mapicon{
+  float: left;
+  margin-top: 26px;
+  font-size: 1.4rem;
+}
+
+#mapCity{
+  display: inline;
+  margin-left: 4px;
+  border-color: rgb(87, 86, 86);
+  width: 134px;
+  height: 44px;
+  margin-bottom: 10px; 
+  margin-top: 18px;
+}
+
+#mapCounty{
+  display: inline;
+  margin-left: 1px;
+  width: 156px;
+  height: 44px;
+  border-color: rgb(87, 86, 86);
+  margin-bottom: 10px;
+  margin-top: 18px;
+}
+
+#searchbtn{
+  width: 157px;
+  height: 44px;
+  margin-left: 3px;
+}
+
+#resetbtn{
+  width: 157px;
+  height: 44px;
+  margin-left: 23px;
+}
+
+
+.sub_menu {
+  margin-top: 30px;
+}
+
+
+
+.has_sub {
+  width: 100%;
+}
+
+.hide_sidemenu {
+  display: none;
+}
+
+
+
+/* 리스트 */
+
+#museumlist{
+  margin-left: 27px;
+  padding: 0px 0 4px 14px;
+  width: 350px;
+  height: 200px;
+}
+
+
+a{
+  text-decoration-line: none;
+}
+#museName{
+  display: inline;
+  margin-right: 5px;
+  font-size: large;
+}
+
+.mu_list{
+  padding: 15px 25px;
+}
+#staravg{
+  margin-left: 5px;
+  margin-top: 7px;
+  width: 30px;
+  height: 15px;
+  font-size: 0.15rem;
+  
+}
+.list-group-item{
+  border: none;
+}
+
+.museumheart{
+  display: inline;
+  font-size: 1.3rem;
+  margin-left: 140px;
+  color: rgb(243, 86, 86);
+  cursor: pointer;
+}
+.bi-heart{
+
+  margin-left: 140px;
+  font-size: 1.3rem;
+  color: rgb(243, 86, 86);
+  cursor: pointer;
+}
+.bi-heart-fill{
+
+  margin-left: 140px;
+  font-size: 1.3rem;
+  color: rgb(243, 86, 86);
+  cursor: pointer;
+}
+
+/* 스크롤 바*/
+.searchlist{
+  overflow-y: auto;
+  height: 750px;
+  overflow-x:hidden;
+  margin-top: 20px;
+}
+
+.searchlist::-webkit-scrollbar{
+  width: 6px;
+}
+
+
+.searchlist::-webkit-scrollbar-thumb{
+  height: 17%;
+  background-color: #448c74fa;
+  border-radius: 10px;  
+}
+
+
+.searchlist::-webkit-scrollbar-track{
+  background-color: #448c7459;
+}
+
+/*더보기*/
+#map_seeMore{
+  margin-top: 20px;
+  margin-left: 140px;
+}
+
+
+
+
+/*별점*/
+
+.ai-star-filled{
+  color: rgb(255, 217, 0);
+}
+
+.rating .star-wrap{
+  width: 18px; 
+  display: inline-block;
+}
+
+.rating .star{
+  width: 0;
+  overflow: hidden;
+
+}

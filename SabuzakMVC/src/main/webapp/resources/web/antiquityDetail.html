@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="utf-8">
+<title>사부작 - 유물 상세</title>
+<link rel="stylesheet" href="../css/antiquityDetail.css">
+<!-- <script src="https://code.jquery.com/jquery-3.6.1.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+	integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"></script>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+	crossorigin="anonymous">
+    </script>
+<!-- SEO Meta Tags-->
+<meta name="description"
+	content="Around - Multipurpose Bootstrap HTML Template">
+<meta name="keywords"
+	content="bootstrap, business, corporate, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, saas, multipurpose, product landing, shop, software, ui kit, web studio, landing, dark mode, html5, css3, javascript, gallery, slider, touch, creative">
+<meta name="author" content="Createx Studio">
+<!-- Viewport-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon and Touch Icons-->
+	<link rel="apple-touch-icon" sizes="180x180" href="../img/sabuzak_logo_black.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/sabuzak_logo_black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/sabuzak_logo_black.png">
+  <link rel="manifest" href="../img/sabuzak_logo_black.png">
+  <link rel="mask-icon" color="#6366f1" href="../img/sabuzak_logo_black.png">
+  <meta name="msapplication-TileColor" content="#080032">
+  <meta name="msapplication-config" href="../img/sabuzak_logo_black.png">
+  <meta name="theme-color" content="white">
+  <!-- Page loading styles-->
+
+<!-- Page loading scripts-->
+<script>
+    (function () {
+      window.onload = function () {
+        const preloader = document.querySelector('.page-loading');
+        preloader.classList.remove('active');
+        setTimeout(function () {
+          preloader.remove();
+        }, 1500);
+      };
+    })();
+
+  </script>
+<!-- Import Google Font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+	rel="stylesheet" id="google-font">
+<!-- Vendor styles-->
+<link rel="stylesheet" media="screen" href="../vendor/aos/dist/aos.css" />
+<link rel="stylesheet" media="screen"
+	href="../vendor/img-comparison-slider/dist/styles.css" />
+<!-- Main Theme Styles + Bootstrap-->
+<link rel="stylesheet" media="screen" href="../css/theme.min.css">
+<!--Header stylesheet-->
+<link rel="stylesheet" href="../css/header_1.css">
+<link rel="stylesheet" href="../css/footer_1.css">
+</head>
+<!-- Body-->
+
+<body>
+	<!-- Page loading spinner-->
+	<div class="page-loading active">
+		<div class="page-loading-inner">
+			<div class="page-spinner"></div>
+			<span>Loading...</span>
+		</div>
+	</div>
+	<!-- Page wrapper-->
+
+	<main class="page-wrapper">
+
+		<!--헤더부분~~~~-->
+
+		<header class="navbar navbar-expand-lg fixed-top bg-light">
+      <div class="container"><a class="navbar-brand pe-sm-3" href="index.html">
+          <img src="../img/logo_small1.png">
+          <span class="d-none d-sm-inline">사부작</span></a>
+        <div class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto" data-bs-toggle="mode">
+          <a id="login_btn" class="btn btn-primary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex" href="login.html"
+            target="_blank" rel="noopener">&nbsp;로그인&nbsp; </a>
+        </div>
+        <a class="btn btn-primary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex" id="join" href="enroll.html" target="_blank"
+          rel="noopener">&nbsp;회원가입&nbsp;</a>
+
+        <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span
+            class="navbar-toggler-icon"></span></button>
+        <nav class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
+
+            <li class="nav-item"><a class="nav-link" href="intro.html"  >사부작소개</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="museumSearch.html" >박물관</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="antiquitySearch.html" >유물</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="exhibition.html" >특별전시</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="Board.html" >게시판</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="notice.html" >공지사항</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="mypage.html" >마이페이지</a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+		<!-- 전체 배경 컨테이너-->
+		<div class="main_container"
+			style="background-image: url('../img/back.JPG'); ">
+			<!-- 이동 경로 -->
+			<section id="bc" class="container">
+        <!--breadcrumb-->
+        <ol id="bc2" class="breadcrumb">
+          <li class="breadcrumb-item doing">
+            <a href="index.html">
+              <i class="ai-home fs-base me-2"></i>
+              Home
+            </a>
+          </li>
+          <li class="breadcrumb-item"><a href="antiquitySearch.html">유물</a></li>
+          <li class="breadcrumb-item active" aria-current="page" id="antName" name="antName">유물명</li>
+        </ol>
+      </section>
+			<!-- 이동 경로 끝-->
+
+			<div class="title">
+				<h2>유물명</h2>
+			</div>
+
+			<div class="location">
+				<img src="../img/map3.png" width="50" height="35"></i>국립부여박물관
+			</div>
+
+			<!-- 유물 정보 컨테이너-->
+			<div class="antiquity_container">
+				<!-- 왼쪽 정보 -->
+				<div class="antiquity_left">
+					<!-- 찜버튼 -->
+					<i class="bi-heart" id="heart1" name="heart1"></i>
+					<script>
+            var i = 0;
+            $('.bi-heart').on('click', function () {
+              if (i == 0) {
+                $(this).removeClass('bi-heart');
+                $(this).addClass('bi-heart-fill');
+                i++;
+              } else if (i == 1) {
+                $(this).removeClass('bi-heart-fill');
+                $(this).addClass('bi-heart');
+                i--;
+              }
+
+            });
+          </script>
+					<img src="../img/antique.jpg">
+				</div>
+				<!-- 왼쪽 정보 끝-->
+				<!-- 오른쪽 정보-->
+				<div class="antiquity_right">
+					<div class="container">
+						<div class="row" id="row1">
+							<div class="col">
+								<h4 id="info">INFORMATION</h4>
+								<h4 id="info2">유물 정보</h4>
+								<i class="ai-circle-info"></i>
+							</div>
+						</div>
+						<div class="row" id="row2">
+							<div class="col" id="col1">
+								<span>명칭</span>
+							</div>
+							<div class="col" id="col2">
+								<span>Column</span>
+							</div>
+						</div>
+						<div class="row" id="row3">
+							<div class="col" id="col1">
+								<span>다른명칭국보</span>
+							</div>
+							<div class="col" id="col2">
+								<span>Column</span>
+							</div>
+						</div>
+						<div class="row" id="row4">
+							<div class="col" id="col1">
+								<span>국적/시대</span>
+							</div>
+							<div class="col" id="col2">
+								<span>Column</span>
+							</div>
+						</div>
+						<div class="row" id="row5">
+							<div class="col" id="col1">
+								<span>출토지</span>
+							</div>
+							<div class="col" id="col2">
+								<span>Column</span>
+							</div>
+						</div>
+						<div class="row" id="row6">
+							<div class="col" id="col1">
+								<span>분류</span>
+							</div>
+							<div class="col" id="col2">
+								<span>Column</span>
+							</div>
+						</div>
+						<div class="row" id="row7">
+							<div class="col" id="col1">
+								<span>재질</span>
+							</div>
+							<div class="col" id="col2">
+								<span>Column</span>
+							</div>
+						</div>
+						<div class="row" id="row8">
+							<div class="col" id="col1">
+								<span>크기/높이</span>
+							</div>
+							<div class="col" id="col2">
+								<span>Column</span>
+							</div>
+						</div>
+						<div class="row" id="row9">
+							<div class="col" id="col1">
+								<span>지정문화재</span>
+							</div>
+							<div class="col" id="col2">
+								<span>Column</span>
+							</div>
+						</div>
+						<div class="row" id="row10">
+							<div class="col" id="col1">
+								<span>소장품번호부여</span>
+							</div>
+							<div class="col" id="col2">
+								<span>Column</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 오른쪽 정보 끝-->
+			</div>
+			<!-- 유물 정보 컨테이너 끝-->
+			<!-- 유물 설명 컨테이너 -->
+			<div class="description_container">
+				<h3 id="about">ABOUT</h3>
+				<h3 id="desc_header">유물 설명</h3>
+				<hr>
+				<p>충남 부여군 부여읍 능산리사지 부속건물 공방지(工房址)에서 출토. 완형. 재질 동 표면에 금을 도금함. 용이
+					머리를 들어 입으로 몸체 하부를 물고 있는 받침과, 연꽃잎으로 장식된 몸통, 그리고 산봉우리가 층층이 중첩된 형태의
+					뚜껑으로 이루어져 있음. 뚜껑 위에는 날개를 활짝 편 한 마리의 봉황이 표현됨, 뚜껑에는 다섯 방향으로 쌓아올린 봉우리에
+					식물, 바위 등을 배치하였고, 그 사이로 산길과 시냇물, 폭포 등을 표현하였으며, 호랑이, 멧돼지, 원숭이, 새 등 현실
+					속의 동물과 기이한 상상의 동물 및 인물을 함께 묘사함, 뚜껑에 표현된 모습은 동물과 사람들이 신선 세계에 있는 듯한
+					광경이며, 윗부분에는 완함(阮咸), 배소(排簫), 장적(長笛), 거문고, 북을 연주하는 5인의 주악선인을 등간격 으로
+					배치하였고, 그 옆의 다섯 마리 새들은 꼭대기의 봉황을 응시함, 봉황은 턱 밑에 구슬을 낀 채 하늘에서 방금 날아 내려온
+					듯 날개를 활짝 펼치고 있음, 전체적으로 보면 74곳의 봉우리와 봉황, 용등과 호랑이, 사슴, 코끼리, 원숭이, 멧돼지
+					등 39마리의 동물과 5인의 악사, 산중의 신선 등 16인의 인물상, 6군데의 나무, 12군데의 바위, 산 사이로 흐르는
+					시냇물 등의 삼라만상이 입체적으로 표현됨, 몸통은 여덟 개의 꽃잎으로 이루어진 세 겹의 연꽃잎으로 표현되었으며, 꽃잎
+					위에 신선과 물가의 동물들이 묘사됨, 받침은 하늘을 향해 용틀임하는 용을 역동적으로 표현하였고, 다리와 몸통 사이에
+					구름무늬, 연꽃무늬 등을 배치하여 전체가 하나의 원형 받침을 이루도록 함, 몸통과 받침은 용이 물고 있는 봉(棒)을
+					몸통에 낸 홈에 끼워 연결됨, 이 향로는 신선들이 산다는 신산(神山)을 표현한 박산향로(博山香爐)의 전통을 계승하면서
+					백제적인 요소를 가미함.</p>
+			</div>
+			<!-- 유물 설명 컨테이너 끝-->
+
+			<div class="dif_antiquity">
+				<h3>시대가 유사한 유물</h3>
+				<div class="button-container" >
+					<button class="prev btn btn-prev btn-icon btn-outline-primary rounded-circle me-2" >
+						<i class="ai-arrow-left"></i>
+					</button>
+				</div>
+				<div class="button-container2" >
+					<button class="next btn btn-next btn-icon btn-outline-primary rounded-circle ms-2" style="display: flex;">
+						<i class="ai-arrow-right"></i>
+					</button>
+				</div>
+				<div class="window">
+					<ul class="container1">
+						<li class="cell">5</li>
+						<li class="cell">1</li>
+						<li class="cell">2</li>
+						<li class="cell">3</li>
+						<li class="cell">4</li>
+					</ul>
+				</div>
+				<!-- window 끝-->
+				<script>
+          const container = document.querySelector(".container1");
+          const prevBtn = document.querySelector(".prev");
+          const nextBtn = document.querySelector(".next");
+
+          (function addEvent() {
+            prevBtn.addEventListener('click', translateContainer.bind(this, 1));
+            nextBtn.addEventListener('click', translateContainer.bind(this, -1));
+          })();
+
+          function translateContainer(direction) {
+            const selectedBtn = (direction === 1) ? 'prev' : 'next';
+            container.style.transitionDuration = '300ms';
+            container.style.transform = `translateX(${direction * (100 / 5)}%)`;
+            container.ontransitionend = () => reorganizeEl(selectedBtn);
+          }
+
+          function reorganizeEl(selectedBtn) {
+            container.removeAttribute('style');
+            (selectedBtn === 'prev') ? container.insertBefore(container.lastElementChild, container.firstElementChild) : container.appendChild(container.firstElementChild);
+          }
+        </script>
+			</div>
+
+			<div class="review_container">
+
+				<!-- 리뷰-->
+				<div class="review">
+					<div class="container py-sm-1 py-lg-1 py-xl-2 py-xxl-5">
+						<div class="reviewHead">
+							<ul class="rh">
+								<li class="review1">REVIEWS</li>
+								<li class="review2">리뷰 (4개)</li>
+							</ul>
+							<!-- 정렬 -->
+							<div id="reviewSort"
+								class="d-flex align-items-center flex-shrink-0 mb-2">
+								<select class="form-select form-select-flush py-0">
+									<option value="newest">최신순</option>
+									<option value="best">추천순</option>
+								</select>
+							</div>
+						</div>
+
+						<!--댓글-->
+
+						<div class="reviewWrite">
+
+							<div class="reviewlist">
+								<h6 class="reviewName" id="mReplyNo">
+									김땡땡
+									<div class="reviewDate" id="createDate">2022-00-00</div>
+								</h6>
+								<div class="trashbtn">
+									<button
+										class="btn btn-icon btn-sm btn-light bg-light border-0 rounded-circle zindex-5 "
+										type="button">
+										<i class="ai-trash fs-xl text-danger"></i>
+									</button>
+								</div>
+								<p class="reviewContent" id="content">
+									아름다워요!
+									<!-- <em class="likeDislike"><i class="bi bi-hand-thumbs-down" id="dislike" onclick="cleck('dislike1')"></i>(0)</em>  나중에 이런식으로 해야한다고 함 jsp에서 ajax가지고와서 하나씩 따로따로-->
+									<button class="likeDislike">
+										<i class="bi bi-hand-thumbs-down" id="bad" name="dislike"></i>(0)
+									</button>
+									<em class="likeDislike"><i class="bi bi-hand-thumbs-up"
+										id="good" name="like"></i>(2)</em>
+								</p>
+							</div>
+
+							<div class="reviewlist">
+								<h6 class="reviewName" id="mReplyNo">
+									김땡땡
+									<div class="reviewDate" id="createDate">2022-00-00</div>
+								</h6>
+								<div class="trashbtn">
+									<button
+										class="btn btn-icon btn-sm btn-light bg-light border-0 rounded-circle zindex-5 "
+										type="button">
+										<i class="ai-trash fs-xl text-danger"></i>
+									</button>
+								</div>
+								<p class="reviewContent" id="content">
+									아름다워요! <em class="likeDislike"><i
+										class="bi bi-hand-thumbs-down" id="bad" name="dislike"></i>(0)</em>
+									<em class="likeDislike"><i class="bi bi-hand-thumbs-up"
+										id="good" name="like"></i>(2)</em>
+								</p>
+							</div>
+
+							<div class="reviewlist">
+								<h6 class="reviewName" id="mReplyNo">
+									김땡땡
+									<div class="reviewDate" id="createDate">2022-00-00</div>
+								</h6>
+								<div class="trashbtn">
+									<button
+										class="btn btn-icon btn-sm btn-light bg-light border-0 rounded-circle zindex-5 "
+										type="button">
+										<i class="ai-trash fs-xl text-danger"></i>
+									</button>
+								</div>
+								<p class="reviewContent" id="content">
+									아름다워요! <em class="likeDislike"><i
+										class="bi bi-hand-thumbs-down" id="bad" name="dislike"></i>(0)</em>
+									<em class="likeDislike"><i class="bi bi-hand-thumbs-up"
+										id="good" name="like"></i>(2)</em>
+								</p>
+							</div>
+
+							<div class="reviewlist">
+								<h6 class="reviewName" id="mReplyNo">
+									김땡땡
+									<div class="reviewDate" id="createDate">2022-00-00</div>
+								</h6>
+								<div class="trashbtn">
+									<button
+										class="btn btn-icon btn-sm btn-light bg-light border-0 rounded-circle zindex-5 "
+										type="button">
+										<i class="ai-trash fs-xl text-danger"></i>
+									</button>
+								</div>
+								<p class="reviewContent" id="content">
+									아름다워요! <em class="likeDislike"><i
+										class="bi bi-hand-thumbs-down" id="bad" name="dislike"></i>(0)</em>
+									<em class="likeDislike"><i class="bi bi-hand-thumbs-up"
+										id="good" name="like"></i>(2)</em>
+								</p>
+							</div>
+
+						</div>
+
+						<button type="button" class="btn btn-primary rounded-pill"
+							id="seeMore">리뷰더보기</button>
+
+
+
+						
+					
+						<form method="post"class="rpwrite">
+						<!-- 리뷰쓰기-->
+						<div class="input-group" style="background-color: #fff;">
+							<input type="hidden" name="antNo" value="" /> <input
+								type="hidden" name="aReplyNo" value="" />
+							<textarea  class="form-control border"
+							id="content" name="reWrite"  style="background-color: #fff;"
+								placeholder="댓글을 작성해주세요~" rows="4"
+								data-bind-characters-target="#charactersRemaining"
+								maxlength="1000" required></textarea>
+							<button type="submit" class="btn btn-primary" id="replybtn">등록</button>
+						</div>
+						<small class="font-weight-light mx-3">글자수 <span
+							class="textLength" id="charactersRemaining">1000</span>자 이내
+						</small>
+						</form> 
+				</div>
+	
+			</section>
+
+			</div>
+
+
+		</div>
+		<!-- 전체 배경 컨테이너 끝 -->
+  <!-- Footer-->
+  <footer class="footer">
+    <div class="container pt-md-2 pt-lg-3 pt-xl-4">
+      <div class="row pb-5 pt-sm-2 mb-lg-2">
+        <div class="col-md-12 col-lg-3 pb-2 pb-lg-0 mb-4 mb-lg-0"><a class="navbar-brand py-0 mb-3 mb-lg-4"
+            href="index.html"><span class="text-primary flex-shrink-0 me-2">
+              <img version="1.1" width="80" height="60" viewBox="0 0 36 33" src="../img/sabuzak_logo_black.png" />
+              <path fill="currentColor"
+                d="M35.6,29c-1.1,3.4-5.4,4.4-7.9,1.9c-2.3-2.2-6.1-3.7-9.4-3.7c-3.1,0-7.5,1.8-10,4.1c-2.2,2-5.8,1.5-7.3-1.1c-1-1.8-1.2-4.1,0-6.2l0.6-1.1l0,0c0.6-0.7,4.4-5.2,12.5-5.7c0.5,1.8,2,3.1,3.9,3.1c2.2,0,4.1-1.9,4.1-4.2s-1.8-4.2-4.1-4.2c-2,0-3.6,1.4-4,3.3H7.7c-0.8,0-1.3-0.9-0.9-1.6l5.6-9.8c2.5-4.5,8.8-4.5,11.3,0L35.1,24C36,25.7,36.1,27.5,35.6,29z">
+              </path>
+              </svg>
+            </span><span class="text-nav">사부작</span></a>
+          <p id="asdmflasdkmfdlas" class="fs-xs pb-2 pb-lg-3 mb-3">사부작은 유물과 전국 박물관에 대한 정보를 제공함으로써<br />현대인들에게 보다 쉽게 역사에
+            다가갈 수 있도록 합니다.</p>
+          <div class="d-flex"><a class="btn btn-icon btn-sm btn-secondary btn-facebook rounded-circle me-3" href="#"><i
+                class="ai-facebook"></i></a>
+            <a class="btn btn-icon btn-sm btn-secondary btn-instagram rounded-circle me-3" href="#"><i
+                class="ai-instagram"></i></a>
+            <a class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle" href="#"><i
+                class="ai-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-2 offset-xl-1 mb-4 mb-sm-0">
+          <ul class="nav flex-column">
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="intro.html">사부작 소개</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="notice.html">공지사항</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="museumSearch.html">박물관</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="antiquitySearch.html">유물</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="exhibition.html">특별전시</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="Board.html">게시판</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4 col-lg-2 mb-4 mb-sm-0">
+          <ul class="nav flex-column">
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="mailto:sabuzak@multi.com">sabuzak@multi.com</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="tel:+821234567">+82 123 4567</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="tel:+828901234">+82 890 1234</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-5 col-lg-4 col-xl-3 offset-lg-1">
+          <h3 class="h6 mb-2">사부작의 소식을 구독해보세요.</h3>
+          <p class="fs-sm">새로운 유물 소식을 놓치지 마세요!</p>
+          <div class="input-group input-group-sm">
+            <input class="form-control" type="text" placeholder="Your email">
+            <button class="btn btn-primary" type="button">구독하기</button>
+          </div>
+        </div>
+      </div>
+      <p class="fs-sm mb-0"><span class="opacity-70">&copy; 2022, Sabuzak, Korea. All rights reserved. </span><a
+          class="nav-link d-inline fw-normal p-0" href="index.html" target="_blank" rel="noopener">Sabuzak
+          </a></p>
+    </div>
+  </footer>
+
+
+		<!-- Back to top button-->
+		<a class="btn-scroll-top" href="#top" data-scroll> <svg
+				viewBox="0 0 40 40" fill="currentColor"
+				xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor"
+					stroke-width="1.5" stroke-miterlimit="10">
+        </circle>
+      </svg><i class="ai-arrow-up"></i></a>
+		<!-- Vendor scripts: js libraries and plugins-->
+		<script src="../vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script
+			src="../vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+		<!-- <script src="../assets/vendor/parallax-js/dist/parallax.min.js"></script>-->
+		<!--<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>-->
+		<script src="../vendor/aos/dist/aos.js"></script>
+		<!-- Main theme script-->
+		<script src="../js/theme.min.js"></script>
+		<script src="../js/sabuzak_5.js"></script>
+
+	</main>
+</body>
+
+</html>

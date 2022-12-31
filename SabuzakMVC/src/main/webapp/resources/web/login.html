@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>사부작 | 로그인</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Around - Multipurpose Bootstrap HTML Template">
+    <meta name="keywords" content="bootstrap, business, corporate, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, saas, multipurpose, product landing, shop, software, ui kit, web studio, landing, dark mode, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/sabuzak_logo_black.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/sabuzak_logo_black.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/sabuzak_logo_black.png">
+    <link rel="manifest" href="../img/sabuzak_logo_black.png">
+    <link rel="mask-icon" color="#6366f1" href="../img/sabuzak_logo_black.png">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" href="../img/sabuzak_logo_black.png">
+    <meta name="theme-color" content="white">
+
+
+    <!-- Theme mode-->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== undefined && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+      
+      
+    </script>
+
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1500);
+        };
+      })();
+      
+    </script>
+    <!-- Import Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" id="google-font">
+    <!-- Vendor styles-->
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../css/theme.min.css">
+    <link rel="stylesheet" href="../css/login.css">
+    
+  </head>
+  <!-- Body-->
+  <body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+    <!-- Page wrapper-->
+    <main class="page-wrapper">
+<!-- Home button--><a class="text-nav btn btn-icon  homebutton"  href="index.html"  title="메인으로"  style="margin-top: 10px;">돌아가기<img src="../img/homepage_icon.png"></a>
+      <!-- Page content-->
+      <div class="login">
+        <!-- Sign in form-->
+        <div class="sigin">
+          <div class="w-100 " style="max-width: 526px; ">
+            <div class="idpwinput">
+            <h1>로그인</h1>
+            <p class="pb-3 mb-3 mb-lg-4">계정이 없으신가요?&nbsp;&nbsp;<a href='enroll.html'>회원가입</a></p>
+            <form class="needs-validation" novalidate>
+              <div class="pb-3 mb-3">
+                <div class="position-relative"></i>
+                  <p style="font-size: medium; font-weight: 900; text-align: left;">아이디</p>
+                  <input class="form-control form-control-lg ps-5" type="text" placeholder="아이디" required>
+                </div>
+              </div>
+              <div class="mb-4">
+                <div class="position-relative"></i>
+                  <div class="password-toggle">
+                    <p  style="font-size: medium; font-weight: 900; text-align: left;">비밀번호</p>
+                    <input class="form-control form-control-lg ps-5" type="password" placeholder="비밀번호 입력" required>
+                    <label class="password-toggle-btn" aria-label="Show/hide password" style="margin-top:4%" >
+                      <input class="password-toggle-check" type="checkbox">
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap align-items-center ">
+                <form-check class="my-1">
+                  <input class="form-check-input" type="checkbox" id="keep-signedin">
+                  <label class="form-check-label ms-1" for="keep-signedin">아이디저장</label>
+                  <input class="form-check-input" type="checkbox" id="keep-signedin">
+                  <label class="form-check-label ms-1" for="keep-signedin">자동로그인</label>
+                </form-check>
+              </div>
+            </div>
+          </div>
+            
+              <div class="searchid">
+              <a class="fs-sm fw-semibold text-decoration-none my-1" href="IdSearch.html" > 아이디찾기</a>
+              <a class="fs-sm fw-semibold text-decoration-none my-1" href="passwordRecovery.html"> &nbsp&nbsp비밀번호찾기</a>
+            </div>
+              <button class="btn btn-primary" type="submit" style="text-align: center; width: 60%;">로그인</button>
+            
+              <h6 class="snslogin" style="text-align: center; margin-top: 1.3rem;">SNS 간편 로그인</h6>
+              <button class="btn kakao" type="submit" style="text-align: center; width:70%; border: none; "><img src="../img/kakaologin.JPG" ></button>
+              <!-- Copyright-->
+          
+             <p><span class="text-muted" style="margin-bottom: 3px;">&copy; All rights reserved. Made by 사부작</span></p>
+    
+            </form>
+          </div>
+        </div>
+  
+
+    </main>
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../css/bootstrap.bundle.min.js"></script>
+    <script src="../css/smooth-scroll.polyfills.min.js"></script>
+    <!-- Main theme script-->
+    <script src="../css/theme.min.js"></script>
+  </body>
+</html>

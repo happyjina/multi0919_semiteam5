@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사부작 - 글쓰기</title>
+  <link rel="stylesheet" href="../css/write.css">
+  <script src="../js/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+  <!-- SEO Meta Tags-->
+  <meta name="description" content="Around - Multipurpose Bootstrap HTML Template">
+  <meta name="keywords"
+    content="bootstrap, business, corporate, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, saas, multipurpose, product landing, shop, software, ui kit, web studio, landing, dark mode, html5, css3, javascript, gallery, slider, touch, creative">
+  <meta name="author" content="Createx Studio">
+  <!-- Viewport-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Favicon and Touch Icons-->
+ <link rel="apple-touch-icon" sizes="180x180" href="../img/sabuzak_logo_black.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="../img/sabuzak_logo_black.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="../img/sabuzak_logo_black.png">
+ <link rel="manifest" href="../img/sabuzak_logo_black.png">
+ <link rel="mask-icon" color="#6366f1" href="../img/sabuzak_logo_black.png">
+ <meta name="msapplication-TileColor" content="#080032">
+ <meta name="msapplication-config" href="../img/sabuzak_logo_black.png">
+ <meta name="theme-color" content="white">
+  <!-- Page loading scripts-->
+  <script>
+    (function () {
+      window.onload = function () {
+        const preloader = document.querySelector('.page-loading');
+        preloader.classList.remove('active');
+        setTimeout(function () {
+          preloader.remove();
+        }, 1500);
+      };
+    })();
+
+  </script>
+  <!-- Import Google Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"
+    id="google-font">
+  <!-- Vendor styles-->
+  <link rel="stylesheet" media="screen" href="../vendor/aos/dist/aos.css" />
+  <link rel="stylesheet" media="screen" href="../vendor/img-comparison-slider/dist/styles.css" />
+  <!-- Main Theme Styles + Bootstrap-->
+  <link rel="stylesheet" media="screen" href="../css/theme.min.css">
+  <!--Header stylesheet-->
+  <link rel="stylesheet" href="../css/header_1.css">
+  <link rel="stylesheet" href="../css/footer_1.css">
+</head>
+
+<body>
+  <!-- Page loading spinner-->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div><span>Loading...</span>
+    </div>
+  </div>
+  <!-- Page wrapper-->
+
+  <main class="page-wrapper">
+
+    <!--헤더부분~~~~-->
+
+    <main class="page-wrapper">
+
+      <!--헤더-->
+      <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page-->
+      <header class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container"><a class="navbar-brand pe-sm-3" href="index.html">
+            <img src="../img/logo_small1.png">
+            <span class="d-none d-sm-inline">사부작</span></a>
+
+          <!-- 로그인 하기전 
+          <div class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto" data-bs-toggle="mode">
+            <a id="login_btn" class="btn btn-primary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex" href="login.html"
+              target="_blank" rel="noopener">&nbsp;로그인&nbsp; </a>
+          </div>
+          <a class="btn btn-primary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex" id="join" href="enroll.html" target="_blank"
+            rel="noopener">&nbsp;회원가입&nbsp;</a> -->
+
+
+          <!-- 로그인 후 -->
+          <div class="dropdown nav d-none d-sm-block order-lg-3"><a class="nav-link d-flex align-items-center p-0"
+              href="#" data-bs-toggle="dropdown" aria-expanded="false"><img class="m-lg-1"
+                src="../img/sabuzak_logo_black.png" width="55" alt="Isabella Bocouse">
+              <div class="ps-2">
+                <div class="fs-xs lh-1 opacity-60">안녕하세요.</div>
+                <div class="fs-sm dropdown-toggle" id="name">김땡땡</div>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end my-1">
+              <h6 class="dropdown-header fs-xs fw-medium text-muted text-uppercase pb-1">내 계정</h6>
+              <a class="dropdown-item" href="mypage.html"><i class="ai-user-check fs-lg opacity-70 me-2"></i>마이페이지</a>
+              <a class="dropdown-item" href="myArticle.html"><i class="ai-messages fs-lg opacity-70 me-2"></i>내가 쓴
+                글보기</a>
+              <a class="dropdown-item" href="antiWishlist.html"><i class="ai-heart fs-lg opacity-70 me-2"></i>내가 찜한
+                유물</a>
+              <a class="dropdown-item" href="museumWishlist.html"><i class="ai-heart fs-lg opacity-70 me-2"></i>내가 찜한
+                박물관</a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="index.html"><i
+                  class="ai-logout fs-lg opacity-70 me-2"></i>로그아웃</a>
+            </div>
+          </div>
+
+          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+          <nav class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
+
+              <li class="nav-item"><a class="nav-link" href="intro.html"  >사부작소개</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="museumSearch.html" >박물관</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="antiquitySearch.html" >유물</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="exhibition.html" >특별전시</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="Board.html" >게시판</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="notice.html" >공지사항</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="mypage.html" >마이페이지</a>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div>
+        <section class="boardMain">
+          <img src="../img/write_mainimg.jpg" style="width: 100%; height: 500px;">
+          <h1 class="main_image_text" style="font-size:50px">자유게시판</h1>
+        </section>
+      </div >
+
+      
+      <!-- 본문 전체 배경-->
+      <div class="section" style="background-image: url('../img/back.JPG');">
+
+        <!--breadcrumb-->
+        <section id="bc" class="container">
+         <ol id="bc2" class="breadcrumb">
+           <li class="breadcrumb-item doing">
+             <a href="index.html">
+               <i class="ai-home fs-base me-2"></i>
+               Home
+             </a>
+           </li>
+           <li class="breadcrumb-item"><a href="Board.html">게시판</a></li>
+           <li class="breadcrumb-item active" aria-current="page" id="bWrite">글쓰기</li>
+         </ol>
+       </section>
+
+    <div class="outer">
+         <h2>글쓰기</h2>
+      <form method="post">  
+         <div class="inner">
+           <!-- 카테고리 -->
+           <div class="category_container">
+             <select class="form-select bg-white" id="category">
+               <option selected value="">유물</option>
+               <option value="">박물관</option>
+             </select>
+           </div>
+           <!-- 제목 -->
+           <div class="title_container"> 
+             <input class="form-control" type="text" id="title" value="" placeholder="제목" required>
+            </div>
+            <!-- 첨부파일 -->
+            <div class="attachFile_container">
+              <label for="file-input" class="form-label" id="attachFileLabel"><h5>첨부파일</h5></label>
+              <input class="form-control" type="file" id="originalFileName" value="">
+            </div>
+          <!-- 글자 입력 박스 -->
+          <div class="textarea_container">
+            <textarea class="form-control" id="content" rows="5" placeholder="내용을 입력해주세요." data-bind-characters-target="#charactersRemaining" maxlength="10000" required></textarea>
+          </div>
+          <small class="font-weight-light" style="float: right; padding-right: 90px;">글자수
+          <span class="textLength" id="charactersRemaining">10000</span>자 이내</small>
+          <script>
+          $(function () {
+            $('#content').keydown(function () {
+                var inputTextLength = $(this).val().length;//글자수
+                if (inputTextLength > 10000)
+                {
+                    $(this).val($(this).val().substring(0, 10000));
+                }
+                var inputPossible = 10000 - ($(this).val().length);
+                $('.textLength').html(inputPossible);
+            });
+        });
+        </script>
+          <h5 style="margin-top: 50px;">주의사항</h5>
+          <p>※음란물, 차별, 비하, 혐오 및 초상권, 저작권 침해 게시물은 민, 형사상의 책임을 질 수 있습니다.</p>
+        </div>
+        <!-- 버튼 -->
+        <div class="button_container">
+          <button type="submit" class="btn btn-primary" id="enrollButton">등록</button>
+          <button type="reset" class="btn btn-outline-primary" id="cancelButton">취소</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+        <!-- Footer-->
+  <!-- <hr/> position-relative-->
+  <!-- Footer-->
+  <footer class="footer py-5">
+    <div class="container pt-md-2 pt-lg-3 pt-xl-4">
+      <div class="row pb-5 pt-sm-2 mb-lg-2">
+        <div class="col-md-12 col-lg-3 pb-2 pb-lg-0 mb-4 mb-lg-0"><a class="navbar-brand py-0 mb-3 mb-lg-4"
+            href="index.html"><span class="text-primary flex-shrink-0 me-2">
+              <img version="1.1" width="80" height="60" viewBox="0 0 36 33" src="../img/sabuzak_logo_black.png" />
+              <path fill="currentColor"
+                d="M35.6,29c-1.1,3.4-5.4,4.4-7.9,1.9c-2.3-2.2-6.1-3.7-9.4-3.7c-3.1,0-7.5,1.8-10,4.1c-2.2,2-5.8,1.5-7.3-1.1c-1-1.8-1.2-4.1,0-6.2l0.6-1.1l0,0c0.6-0.7,4.4-5.2,12.5-5.7c0.5,1.8,2,3.1,3.9,3.1c2.2,0,4.1-1.9,4.1-4.2s-1.8-4.2-4.1-4.2c-2,0-3.6,1.4-4,3.3H7.7c-0.8,0-1.3-0.9-0.9-1.6l5.6-9.8c2.5-4.5,8.8-4.5,11.3,0L35.1,24C36,25.7,36.1,27.5,35.6,29z">
+              </path>
+              </svg>
+            </span><span class="text-nav">사부작</span></a>
+          <p id="asdmflasdkmfdlas" class="fs-xs pb-2 pb-lg-3 mb-3">사부작은 유물과 전국 박물관에 대한 정보를 제공함으로써<br />현대인들에게 보다 쉽게 역사에
+            다가갈 수 있도록 합니다.</p>
+          <div class="d-flex"><a class="btn btn-icon btn-sm btn-secondary btn-facebook rounded-circle me-3" href="#"><i
+                class="ai-facebook"></i></a>
+            <a class="btn btn-icon btn-sm btn-secondary btn-instagram rounded-circle me-3" href="#"><i
+                class="ai-instagram"></i></a>
+            <a class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle" href="#"><i
+                class="ai-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-2 offset-xl-1 mb-4 mb-sm-0">
+          <ul class="nav flex-column">
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="intro.html">사부작 소개</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="notice.html">공지사항</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="museumSearch.html">박물관</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="antiquitySearch.html">유물</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="exhibition.html">특별전시</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="Board.html">게시판</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4 col-lg-2 mb-4 mb-sm-0">
+          <ul class="nav flex-column">
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="mailto:sabuzak@multi.com">sabuzak@multi.com</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="tel:+821234567">+82 123 4567</a></li>
+            <li><a class="nav-link py-1 px-0" id="footer_nav" href="tel:+828901234">+82 890 1234</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-5 col-lg-4 col-xl-3 offset-lg-1">
+          <h3 class="h6 mb-2">사부작의 소식을 구독해보세요.</h3>
+          <p class="fs-sm">새로운 유물 소식을 놓치지 마세요!</p>
+          <div class="input-group input-group-sm">
+            <input class="form-control" type="text" placeholder="Your email">
+            <button class="btn btn-primary" type="button">구독하기</button>
+          </div>
+        </div>
+      </div>
+      <p class="fs-sm mb-0"><span class="opacity-70">&copy; 2022, Sabuzak, Korea. All rights reserved. </span><a
+          class="nav-link d-inline fw-normal p-0" href="index.html" target="_blank" rel="noopener">Sabuzak
+          </a></p>
+    </div>
+  </footer>
+  </div>
+	
+	
+    </main>
+
+</body>
+
+</html>

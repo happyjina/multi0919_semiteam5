@@ -1,0 +1,158 @@
+/* .body{
+    background-image: url(../img/back1.JPG);
+    background-size: cover;
+} */
+.my_div{
+    position: relative;
+    height: 1030px;
+  }
+  .my_bg{
+    background-image: url("../img/back.JPG");
+    background-size: cover;
+  }
+/*breadcrumg*/
+#bc2{
+    margin-left: 220px; 
+  }
+  .py-5{
+    padding-bottom: 0px !important;
+  }
+  #bc{
+    padding-top: 30px;
+    
+  }
+  #bWrite{
+    font-weight: 800;
+  }
+  
+.home-mu{
+    padding-top: 20px;
+    margin-left: 100px; 
+    position: relative;
+}
+.bi-house{
+    position: absolute;
+    left: 20px;
+    font-size: 20px;
+    top: 20px;
+  }
+  .righticon1{
+    position: absolute;
+    left: 45px;
+    font-size: 20px;
+    color: darkgray;
+  }
+  .icontext1{
+    position: absolute;
+    left: 22px;
+    font-size: 15px;
+    width: 50px;
+    text-align: center;
+    bottom: 1px;
+    color: rgb(107, 107, 107);
+  }
+  .righticon2{
+    position: absolute;
+    left: 120px;
+    font-size: 20px;
+    color: darkgray;
+}
+.icontext2{
+    color: rgb(107, 107, 107);
+    position: absolute;
+    left: 22px;
+    font-size: 15px;
+    width: 90px;
+    bottom: 1px;
+}
+.righticon3{
+    position: absolute;
+    left: 220px;
+    font-size: 20px;
+    color: darkgray;
+  }
+  .icontext3{
+    color: #448c74;
+    position: absolute;
+    left: 20px;
+    font-size: 15px;
+    width: 90px;
+    bottom: 1px;
+  }
+.myarticle-text{
+    margin: 30px 0px;
+    text-align: center;
+}
+
+.myarticle-text:after {
+    content: "";
+    display: block;
+    width: 90px;
+    border-bottom: 2px solid #000000;
+    margin: 20px auto;
+  }
+#search-input{
+    width: 500px;
+    margin-left: 37%;
+    background-color: white;
+    border-radius: 17px;
+}
+.bi-search{
+    padding-top: 15px;
+    padding-left: 5px;
+}
+
+.radiobut{
+    margin: 10px 15px;
+}
+.boardbox{
+    margin-top: 20px;
+}
+
+#table{
+    margin-left: 24%;
+    width: 1000px;
+    border: 1px solid rgb(95, 95, 95);
+    margin-bottom: 50px;
+    background-color: white;
+
+}
+.boardbox-headline{
+    background-color: rgb(251, 247, 235);
+    text-align: center;
+    padding: 20px;
+    height: 50px;
+}
+.boardbox-detail{
+    text-align: center;
+    height: 50px;
+    border-bottom: 1px solid rgb(95, 95, 95);
+ 
+}
+.myarticletitle{
+    width: 45%;
+}
+.myarticlelist{
+    position: relative;
+    margin-bottom: 100px;
+}
+#myarticlelistbutton{
+    position: absolute;
+    right: 450px;
+    border: 0.5px solid #448c74;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+#myarticlelistbutton > a{
+    color: #448c74;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.page{
+   margin-left: 43%;
+}

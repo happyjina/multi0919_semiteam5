@@ -1,0 +1,53 @@
+/*background image*/
+.my_div{
+  position: relative;
+
+}
+.my_bg{
+  background-image: url("../img/back.JPG");
+  background-size: cover;
+}
+/*breadcrumg*/
+#bc2{
+  margin-left: 13px;
+}
+.py-5{
+  padding-bottom: 0px !important;
+}
+#bc{
+  padding-top: 30px;
+  
+}
+#mypage{
+  font-weight: 800;
+}
+
+#zipcode1{
+  float: left;
+  width: 20%;
+  height: 50px; 
+  flex-wrap: nowrap;
+  padding-left: 0px ;
+}
+#zipcode{
+  margin: 0;
+  
+}
+.ad{
+  float: left;
+  margin-left: 10px;
+
+}
+.justify-content-end {
+  justify-content: center !important;
+}
+
+.mb > .form-control{
+  margin-left: 25%;
+  width: 50%;
+}
+
+
+.mb >.form-label{
+  margin-left: 25%;
+}

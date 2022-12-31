@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>사부작 - 유물 검색 </title>
+
+  <link rel="stylesheet" href="../css/antiquitySearch.css">
+  <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+  <script>
+    function resetForm() {
+      document.getElementsByClassName('form-check').reset();
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous">
+  </script>
+  <!-- SEO Meta Tags-->
+  <meta name="description" content="Around - Multipurpose Bootstrap HTML Template">
+  <meta name="keywords"
+    content="bootstrap, business, corporate, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, saas, multipurpose, product landing, shop, software, ui kit, web studio, landing, dark mode, html5, css3, javascript, gallery, slider, touch, creative">
+  <meta name="author" content="Createx Studio">
+  <!-- Viewport-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon and Touch Icons-->
+	<link rel="apple-touch-icon" sizes="180x180" href="../img/sabuzak_logo_black.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/sabuzak_logo_black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/sabuzak_logo_black.png">
+  <link rel="manifest" href="../img/sabuzak_logo_black.png">
+  <link rel="mask-icon" color="#6366f1" href="../img/sabuzak_logo_black.png">
+  <meta name="msapplication-TileColor" content="#080032">
+  <meta name="msapplication-config" href="../img/sabuzak_logo_black.png">
+  <meta name="theme-color" content="white">
+
+  <!-- Page loading scripts-->
+  <script>
+    (function () {
+      window.onload = function () {
+        const preloader = document.querySelector('.page-loading');
+        preloader.classList.remove('active');
+        setTimeout(function () {
+          preloader.remove();
+        }, 1500);
+      };
+    })();
+
+  </script>
+  <!-- Import Google Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" id="google-font">
+  <!-- Vendor styles-->
+  <link rel="stylesheet" media="screen" href="../vendor/aos/dist/aos.css" />
+  <link rel="stylesheet" media="screen" href="../vendor/img-comparison-slider/dist/styles.css" />
+  <!-- Main Theme Styles + Bootstrap-->
+  <link rel="stylesheet" media="screen" href="../css/theme.min.css">
+  <!--Header stylesheet-->
+  <link rel="stylesheet" href="../css/header_1.css">
+  <link rel="stylesheet" href="../css/footer_1.css">
+</head>
+<!-- Body-->
+
+<body>
+  <!-- Page loading spinner-->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div><span>Loading...</span>
+    </div>
+  </div>
+  <!-- Page wrapper-->
+
+  <main class="page-wrapper">
+
+    <!--헤더부분~~~~-->
+
+    <header class="navbar navbar-expand-lg fixed-top bg-light">
+      <div class="container"><a class="navbar-brand pe-sm-3" href="index.html">
+          <img src="../img/logo_small1.png">
+          <span class="d-none d-sm-inline">사부작</span></a>
+        <div class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto" data-bs-toggle="mode">
+          <a id="login_btn" class="btn btn-primary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex" href="login.html"
+            target="_blank" rel="noopener">&nbsp;로그인&nbsp; </a>
+        </div>
+        <a class="btn btn-primary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex" id="join" href="enroll.html" target="_blank"
+          rel="noopener">&nbsp;회원가입&nbsp;</a>
+
+        <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span
+            class="navbar-toggler-icon"></span></button>
+        <nav class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
+
+            <li class="nav-item"><a class="nav-link" href="intro.html"  >사부작소개</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="museumSearch.html" >박물관</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="antiquitySearch.html" >유물</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="exhibition.html" >특별전시</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="Board.html" >게시판</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="notice.html" >공지사항</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="mypage.html" >마이페이지</a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 헤더 네비 아래 가운데 큰 배경들-->
+    <section>
+      <div class="jarallax">
+        <section class="boardMain">
+          <img src="../img/relic_mainimg.jpg" style="width: 100%; height: 500px;">
+          <h1 class="main_image_text" style="font-size:50px">유물검색</h1>
+          <h4 class="main_image_text2">전국 박물관의 다양한 유물들을 검색해보세요</h4>
+        </section>
+     
+      </div>
+
+      <!-- 유물 검색 배경(청록색) -->
+      <section class="search_container">
+        <div class="search">
+          <div class="input-group bg-white col-md-8 mx-5 mb-5 my-2" style="width: 74%; ">
+            <div class="btn-group dropdown" id="antBtn" >                      
+              <form name=form method=post action="" >         
+                  <select class="form-select" id="antCategory" required>
+                    <option value="category">전체</option>
+                    <option value="antName">소장품명</option>
+                    <option value="antNationalityName1">국적/시대</option>
+                    <option value="antPlaceLandName1">출토지</option>
+                    <option value="antId">소장품번호</option>
+                  </select>
+            </div>
+                  <input type="text" class="form-control text-center" placeholder="카테고리에 맞는 검색어를 입력해주세요.">
+                  <button type="button" class="btn btn-primary">검색</button>
+              </form>
+          </div>
+
+          <!-- 검색 필터 부분-->
+          <div class="filter_container">
+            <div class="filter_title">
+              <h3 style="color: white;">&nbsp;&nbsp;국적/시대</h3>
+              <h3 style="color: white;">출토지</h3>
+              <h3 style="color: white; margin-left: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;재질</h3>
+            </div>
+            <div class="filter1">
+              <!-- 국적 -->
+              <script>
+                function getCheckboxValue()  {
+                  // 선택된 목록 가져오기
+                  const query = 'input[name="countryBox"]:checked';
+                  const selectedEls = 
+                      document.querySelectorAll(query);
+                  
+                  // 선택된 목록에서 value 찾기
+                  let result = '';
+                  selectedEls.forEach((el) => {
+                    result += '\u00a0\u00a0\u00a0'+ el.value;
+                  });
+                  
+                  // 출력
+                  document.getElementById('result').innerText
+                    = result;
+                }
+              </script>
+              <div class="country">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="countryBox" id="" value="한국" onclick="getCheckboxValue()">
+                  <label for="ex-check-1">한국(100)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="countryBox" id="" value="중국" onclick="getCheckboxValue()">
+                  <label class="form-check-label" for="countryBox">중국(200)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2" name="countryBox" value="일본"  onclick="getCheckboxValue()">
+                  <label class="form-check-label" for="countryBox">일본(1879)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2" name="countryBox">
+                  <label class="form-check-label" for="countryBox">아시아(953)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2" name="countryBox">
+                  <label class="form-check-label" for="countryBox">유럽(794)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2" name="countryBox">
+                  <label class="form-check-label" for="countryBox">기타(291)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2" name="countryBox">
+                  <label class="form-check-label" for="countryBox">중국(200)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2" name="countryBox">
+                  <label class="form-check-label" for="countryBox">중국(200)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2" name="countryBox">
+                  <label class="form-check-label" for="countryBox">중국(200)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2" name="countryBox">
+                  <label class="form-check-label" for="countryBox">중국(200)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2" name="countryBox">
+                  <label class="form-check-label" for="countryBox">중국(200)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2" name="countryBox">
+                  <label class="form-check-label" for="countryBox">중국(200)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2" name="countryBox">
+                  <label class="form-check-label" for="countryBox">중국(200)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2" name="countryBox">
+                  <label class="form-check-label" for="countryBox">중국(200)</label>
+                </div>
+              </div>
+              <!-- 시대 -->
+              <div class="era">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2">
+                  <label class="form-check-label" for="ex-check-2">조선(39284)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2">
+                  <label class="form-check-label" for="ex-check-2">원(26465)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2">
+                  <label class="form-check-label" for="ex-check-2">고려(20738)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2">
+                  <label class="form-check-label" for="ex-check-2">청동기(9142)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2">
+                  <label class="form-check-label" for="ex-check-2">신라(7265)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2">
+                  <label class="form-check-label" for="ex-check-2">신라(7265)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2">
+                  <label class="form-check-label" for="ex-check-2">신라(7265)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2">
+                  <label class="form-check-label" for="ex-check-2">신라(7265)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2">
+                  <label class="form-check-label" for="ex-check-2">신라(7265)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2">
+                  <label class="form-check-label" for="ex-check-2">신라(7265)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-2">
+                  <label class="form-check-label" for="ex-check-2">신라(7265)</label>
+                </div>
+              </div>
+            </div>
+            <div class="filter2">
+              <!-- 특별시/도 -->
+              <div class="do">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+              </div>
+              <!-- 시/군 -->
+              <div class="si">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter3">
+              <!-- 재질1 -->
+              <div class="material1">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+              </div>
+              <!-- 재질2 -->
+              <div class="material2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ex-check-1">
+                  <label class="form-check-label" for="ex-check-1">일제강점(39454)</label>
+                </div>
+
+              </div> <!-- material2 끝 -->
+            </div> <!-- filter3 끝-->
+            <img src="../img/selected_fiters_icon.png">
+            <div class="filter_foot">
+              <h6 id="result">&nbsp&nbsp&nbsp아직 선택 안함</h6>
+              <button type="button" id="resetButton">
+              초기화<i class="ai-rotate-left" style="padding-left: 10px; color: black;"></i></button>
+            </div>
+            <!-- <button type="button" id="resetButton"><img src="../img/initial.png" width="25px" height="25px"></button> -->
+            <script>
+              document.getElementById('resetButton').addEventListener('click', function () {
+                let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+                for (var i = 0; i < checkboxes.length; i++) {
+                  checkboxes[i].checked = false;
+                }
+              });
+            </script>
+          </div> <!-- filter container 끝-->
+      </section> <!-- serach_container 끝 -->
+
+      <!-- 유물 부분 컨테이너-->
+      <div class="antiquity_container" style="background-image: url('../img/back.JPG');">
+        <!-- 이동 경로 -->
+        <div class="route">
+          <ol id="bc2" class="breadcrumb">
+            <li class="breadcrumb-item doing">
+              <a href="index.html">
+                <i class="ai-home fs-base me-2"></i>
+                Home
+              </a>
+            </li>
+            <li class="breadcrumb-item"><a href="antiquitySearch.html">유물</a></li>
+            <li class="breadcrumb-item active" aria-current="page" id="antSearch" name="antSearch">유물검색</li>
+          </ol>
+          </nav>
+        </div> <!-- 이동 경로 끝-->
+        <!-- 전체 검색 결과 부분 -->
+        <div class="result">
+          전체 <span>10,234</span>건의 유물이 있습니다.
+        </div> <!-- 전체 검색 결과 부분 끝-->
+
+        <!-- 유물 카드 보여주는 부분 -->
+        <div class="antiquity">
+          <div class="row">
+            <!-- 찜버튼 -->
+              <i class="bi-heart" id="heart1" name="heart1"></i>
+              <i class="bi-heart" id="heart2" name="heart2"></i>
+              <i class="bi-heart" id="heart3" name="heart3"></i>
+              <i class="bi-heart" id="heart4" name="heart4"></i>
+              <i class="bi-heart" id="heart5" name="heart5"></i>
+              <i class="bi-heart" id="heart6" name="heart6"></i>
+              <i class="bi-heart" id="heart7" name="heart7"></i>
+              <i class="bi-heart" id="heart8" name="heart8"></i>
+              <i class="bi-heart" id="heart9" name="heart9"></i>
+              <i class="bi-heart" id="heart10" name="heart10"></i>
+              <i class="bi-heart" id="heart11" name="heart11"></i>
+              <i class="bi-heart" id="heart12" name="heart12"></i>
+            
+            <script>
+     
+              var isHeartChecked = false;
+
+              if (isHeartChecked == false)
+              {
+                  $(this).attr('class', 'bi bi-heart');
+              } else if (isHeartChecked == true)
+              {
+                  $(this).attr('class', 'bi bi-heart-fill');
+              }
+
+              $('.bi-heart').on('click', function () {
+                  isHeartChecked = !isHeartChecked;
+                  if (isHeartChecked == false)
+                  {
+                      $(this).attr('class', 'bi bi-heart');
+                  } else if (isHeartChecked == true)
+                  {
+                      $(this).attr('class', 'bi bi-heart-fill');
+                  }
+              });
+
+            </script>
+
+            
+            <div class="col">
+              <a href="#"
+                class="card-hover card-lifted d-inline-block text-center text-decoration-none mt-2 mb-3">
+                <img src="../img/antique.jpg" class="card-lifted d-block rounded-5 mb-3"
+                  width="320">
+                <h3 class="h5 mb-1">유물1</h3>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#"
+                class="card-hover card-lifted d-inline-block text-center text-decoration-none mt-2 mb-3">
+                <img src="../img/antique.jpg" class="card-lifted d-block rounded-5 mb-3"
+                  width="340">
+                <h3 class="h5 mb-1">유물2</h3>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#"
+                class="card-hover card-lifted d-inline-block text-center text-decoration-none mt-2 mb-3">
+                <img src="../img/antique.jpg" class="card-lifted d-block rounded-5 mb-3"
+                  width="340">
+                <h3 class="h5 mb-1">유물3</h3>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#"
+                class="card-hover card-lifted d-inline-block text-center text-decoration-none mt-2 mb-3">
+                <img src="../img/antique.jpg" class="card-lifted d-block rounded-5 mb-3"
+                  width="340">
+                <h3 class="h5 mb-1">유물4</h3>
+              </a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <a href="#"
+                class="card-hover card-lifted d-inline-block text-center text-decoration-none mt-2 mb-3">
+                <img src="../img/antique.jpg" class="card-lifted d-block rounded-5 mb-3"
+                  width="340">
+                <h3 class="h5 mb-1">유물5</h3>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#"
+                class="card-hover card-lifted d-inline-block text-center text-decoration-none mt-2 mb-3">
+                <img src="../img/antique.jpg" class="card-lifted d-block rounded-5 mb-3"
+                  width="340">
+                <h3 class="h5 mb-1">유물6</h3>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#"
+                class="card-hover card-lifted d-inline-block text-center text-decoration-none mt-2 mb-3">
+                <img src="../img/antique.jpg" class="card-lifted d-block rounded-5 mb-3"
+                  width="340">
+                <h3 class="h5 mb-1">유물7</h3>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#"
+                class="card-hover card-lifted d-inline-block text-center text-decoration-none mt-2 mb-3">
+                <img src="../img/antique.jpg" class="card-lifted d-block rounded-5 mb-3"
+                  width="340">
+                <h3 class="h5 mb-1">유물8</h3>
+              </a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <a href="#"
+                class="card-hover card-lifted d-inline-block text-center text-decoration-none mt-2 mb-3">
+                <img src="../img/antique.jpg" class="card-lifted d-block rounded-5 mb-3"
+                  width="340">
+                <h3 class="h5 mb-1">유물9</h3>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#"
+                class="card-hover card-lifted d-inline-block text-center text-decoration-none mt-2 mb-3">
+                <img src="../img/antique.jpg" class="card-lifted d-block rounded-5 mb-3"
+                  width="340">
+                <h3 class="h5 mb-1">유물10</h3>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#"
+                class="card-hover card-lifted d-inline-block text-center text-decoration-none mt-2 mb-3">
+                <img src="../img/antique.jpg" class="card-lifted d-block rounded-5 mb-3"
+                  width="340">
+                <h3 class="h5 mb-1">유물11</h3>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#"
+                class="card-hover card-lifted d-inline-block text-center text-decoration-none mt-2 mb-3">
+                <img src="../img/antique.jpg" class="card-lifted d-block rounded-5 mb-3"
+                  width="340">
+                <h3 class="h5 mb-1">유물12</h3>
+              </a>
+            </div>
+          </div>
+          <!-- 페이지 네비게이션 -->
+          <div class="page_container">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a href="#" class="page-link">Prev</a>
+                </li>
+                <li class="page-item d-sm-none">
+                  <span class="page-link pe-none">2 / 5</span>
+                </li>
+                <li class="page-item d-none d-sm-block">
+                  <a href="#" class="page-link">1</a>
+                </li>
+                <li class="page-item active d-none d-sm-block" aria-current="page">
+                  <span class="page-link">
+                    2
+                    <span class="visually-hidden">(current)</span>
+                  </span>
+                </li>
+                <li class="page-item d-none d-sm-block">
+                  <a href="#" class="page-link">3</a>
+                </li>
+                <li class="page-item d-none d-sm-block">
+                  <a href="#" class="page-link">4</a>
+                </li>
+                <li class="page-item d-none d-sm-block">
+                  <a href="#" class="page-link">5</a>
+                </li>
+                <li class="page-item">
+                  <a href="#" class="page-link">Next</a>
+                </li>
+              </ul>
+            </nav><!-- 페이지 네비게이션 끝-->
+        </div> <!-- 페이지 컨테이너 끝 -->
+
+        </div> <!-- antiquity 끝-->
+      </div> <!-- 유물 부분 컨테이너 끝-->
+
+      <footer class="footer py-5">
+        <div class="container pt-md-2 pt-lg-3 pt-xl-4">
+          <div class="row pb-5 pt-sm-2 mb-lg-2">
+            <div class="col-md-12 col-lg-3 pb-2 pb-lg-0 mb-4 mb-lg-0"><a class="navbar-brand py-0 mb-3 mb-lg-4"
+                href="index.html"><span class="text-primary flex-shrink-0 me-2">
+                  <img version="1.1" width="80" height="60" viewBox="0 0 36 33" src="../img/sabuzak_logo_black.png" />
+                  <path fill="currentColor"
+                    d="M35.6,29c-1.1,3.4-5.4,4.4-7.9,1.9c-2.3-2.2-6.1-3.7-9.4-3.7c-3.1,0-7.5,1.8-10,4.1c-2.2,2-5.8,1.5-7.3-1.1c-1-1.8-1.2-4.1,0-6.2l0.6-1.1l0,0c0.6-0.7,4.4-5.2,12.5-5.7c0.5,1.8,2,3.1,3.9,3.1c2.2,0,4.1-1.9,4.1-4.2s-1.8-4.2-4.1-4.2c-2,0-3.6,1.4-4,3.3H7.7c-0.8,0-1.3-0.9-0.9-1.6l5.6-9.8c2.5-4.5,8.8-4.5,11.3,0L35.1,24C36,25.7,36.1,27.5,35.6,29z">
+                  </path>
+                  </svg>
+                </span><span class="text-nav">사부작</span></a>
+              <p id="asdmflasdkmfdlas" class="fs-xs pb-2 pb-lg-3 mb-3">사부작은 유물과 전국 박물관에 대한 정보를 제공함으로써<br />현대인들에게 보다 쉽게 역사에
+                다가갈 수 있도록 합니다.</p>
+              <div class="d-flex"><a class="btn btn-icon btn-sm btn-secondary btn-facebook rounded-circle me-3" href="#"><i
+                    class="ai-facebook"></i></a>
+                <a class="btn btn-icon btn-sm btn-secondary btn-instagram rounded-circle me-3" href="#"><i
+                    class="ai-instagram"></i></a>
+                <a class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle" href="#"><i
+                    class="ai-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="col-sm-3 col-lg-2 offset-xl-1 mb-4 mb-sm-0">
+              <ul class="nav flex-column">
+                <li><a class="nav-link py-1 px-0" id="footer_nav" href="intro.html">사부작 소개</a></li>
+                <li><a class="nav-link py-1 px-0" id="footer_nav" href="notice.html">공지사항</a></li>
+                <li><a class="nav-link py-1 px-0" id="footer_nav" href="museumSearch.html">박물관</a></li>
+                <li><a class="nav-link py-1 px-0" id="footer_nav" href="antiquitySearch.html">유물</a></li>
+                <li><a class="nav-link py-1 px-0" id="footer_nav" href="exhibition.html">특별전시</a></li>
+                <li><a class="nav-link py-1 px-0" id="footer_nav" href="Board.html">게시판</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 col-lg-2 mb-4 mb-sm-0">
+              <ul class="nav flex-column">
+                <li><a class="nav-link py-1 px-0" id="footer_nav" href="mailto:sabuzak@multi.com">sabuzak@multi.com</a></li>
+                <li><a class="nav-link py-1 px-0" id="footer_nav" href="tel:+821234567">+82 123 4567</a></li>
+                <li><a class="nav-link py-1 px-0" id="footer_nav" href="tel:+828901234">+82 890 1234</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-5 col-lg-4 col-xl-3 offset-lg-1">
+              <h3 class="h6 mb-2">사부작의 소식을 구독해보세요.</h3>
+              <p class="fs-sm">새로운 유물 소식을 놓치지 마세요!</p>
+              <div class="input-group input-group-sm">
+                <input class="form-control" type="text" placeholder="Your email">
+                <button class="btn btn-primary" type="button">구독하기</button>
+              </div>
+            </div>
+          </div>
+          <p class="fs-sm mb-0"><span class="opacity-70">&copy; 2022, Sabuzak, Korea. All rights reserved. </span><a
+              class="nav-link d-inline fw-normal p-0" href="index.html" target="_blank" rel="noopener">Sabuzak
+              </a></p>
+        </div>
+      </footer>
+    
+      </div>
+      
+  </main>
+</body>
+
+</html>
